@@ -277,8 +277,8 @@
         <div class="column">
             <h4>Hubungi Kami</h4>
             <p>
-                <strong>Alamat:</strong> Jl. Pentol Manis No. 1<br>
-                <strong>Email:</strong> info@pentolsejahtera.com<br>
+                <strong>Alamat:</strong> Jl. Mawar No. 1<br>
+                <strong>Email:</strong> info@pentolBALL.com<br>
                 <strong>Telepon:</strong> +62 812 3456 7890
             </p>
         </div>

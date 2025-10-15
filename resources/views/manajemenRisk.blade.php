@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pentol BALL - Manajemen Risiko & Bahaya</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    header strong {
+      font-size: 18px;
+      color: #444;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #007BFF;
+      text-decoration: underline;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 80px 30px;
+      background: linear-gradient(135deg, #00C6FF, #007BFF);
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    /* Section */
+    section {
+      padding: 40px 30px;
+      max-width: 950px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      color: #007BFF;
+      margin-bottom: 15px;
+    }
+
+    section h3 {
+      color: #333;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #ddd;
+      margin-top: 30px;
+      background: #fff;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div style="display:flex; align-items:center;">
+      <img src="{{ asset('images/logo-pentol.png') }}" alt="Logo Pabrik Pentol">
+      <strong>Pentol BALL</strong>
+    </div>
+    <nav>
+      <a href="#identifikasi">Identifikasi Risiko</a>
+      <a href="#sumber-bahaya">Sumber Bahaya</a>
+      <a href="#faktor-pencegah">Faktor Pencegah</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Manajemen Risiko dan Bahaya di Pabrik Pentol BALL</h1>
+    <p>Identifikasi, pengendalian, dan pencegahan risiko untuk keselamatan kerja yang optimal</p>
+  </section>
+
+  <!-- Identifikasi Risiko -->
+  <section id="identifikasi">
+    <h2>Identifikasi Risiko dan Bahaya</h2>
+    <p>
+      Proses produksi pentol, meskipun terlihat sederhana, memiliki berbagai potensi risiko dan bahaya yang harus diidentifikasi dan dikendalikan. Identifikasi ini sangat penting untuk memastikan keselamatan pekerja, kualitas produk, dan kelancaran operasional.
+    </p>
+
+    <h3>1. Bahaya Fisik</h3>
+    <ul>
+      <li><b>Peralatan Berputar (Mesin Giling/Mixer):</b> Risiko: potongan tubuh terjepit atau terpotong. Penyebab: tidak ada pelindung mesin, kelalaian operator, pakaian longgar.</li>
+      <li><b>Permukaan Basah dan Licin:</b> Risiko: tergelincir atau jatuh. Penyebab: tumpahan air, minyak, atau adonan yang tidak dibersihkan.</li>
+      <li><b>Suhu Ekstrem (Panas):</b> Risiko: luka bakar akibat uap panas. Penyebab: tanpa sarung tangan tahan panas atau percikan air mendidih.</li>
+      <li><b>Bising:</b> Risiko: gangguan pendengaran akibat suara mesin terus-menerus.</li>
+      <li><b>Pencahayaan:</b> Risiko: kelelahan mata dan kecelakaan karena visibilitas rendah.</li>
+    </ul>
+
+    <h3>2. Bahaya Kimia</h3>
+    <ul>
+      <li><b>Bahan Pengawet dan Bumbu:</b> Risiko: iritasi kulit atau pernapasan. Penyebab: kontak tanpa APD.</li>
+      <li><b>Bahan Pembersih:</b> Risiko: iritasi dan keracunan. Penyebab: penggunaan bahan korosif tanpa sarung tangan atau ventilasi cukup.</li>
+    </ul>
+
+    <h3>3. Bahaya Biologis</h3>
+    <ul>
+      <li><b>Kontaminasi Makanan:</b> Risiko: keracunan makanan akibat bakteri/jamur. Penyebab: sanitasi kurang atau bahan baku tidak higienis.</li>
+      <li><b>Tikus dan Hama:</b> Risiko: penyebaran penyakit dan kontaminasi bahan. Penyebab: pengelolaan limbah buruk.</li>
+    </ul>
+
+    <h3>4. Bahaya Ergonomis</h3>
+    <ul>
+      <li><b>Gerakan Berulang dan Postur Buruk:</b> Risiko: nyeri punggung dan cedera otot. Penyebab: posisi kerja salah dan beban berat.</li>
+    </ul>
+
+    <h3>5. Bahaya Psikologis</h3>
+    <ul>
+      <li><b>Beban Kerja Berlebihan:</b> Risiko: stres kerja dan penurunan fokus. Penyebab: target tinggi, jam kerja panjang, dan kurang istirahat.</li>
+    </ul>
+  </section>
+
+  <!-- Sumber Bahaya -->
+  <section id="sumber-bahaya">
+    <h2>Sumber Bahaya yang Berpotensi Menimbulkan Kecelakaan Kerja</h2>
+    <h3>1. Bahaya Fisik</h3>
+    <ul>
+      <li>Luka potong akibat mesin penggiling</li>
+      <li>Luka bakar akibat uap panas</li>
+      <li>Terpeleset karena lantai licin</li>
+      <li>Gangguan pendengaran akibat kebisingan mesin</li>
+    </ul>
+
+    <h3>2. Bahaya Kimia</h3>
+    <ul>
+      <li>Gangguan pernapasan dari bahan pengawet atau bumbu serbuk</li>
+    </ul>
+
+    <h3>3. Bahaya Biologi</h3>
+    <ul>
+      <li>Kontaminasi bakteri/jamur dari bahan baku</li>
+      <li>Hama seperti tikus yang mencemari bahan baku</li>
+    </ul>
+
+    <h3>4. Bahaya Ergonomi</h3>
+    <ul>
+      <li>Cedera otot akibat mengangkat adonan berat</li>
+      <li>Postur membungkuk saat mencetak adonan</li>
+    </ul>
+
+    <h3>5. Bahaya Psikososial</h3>
+    <ul>
+      <li>Stres kerja akibat beban produksi berlebih</li>
+      <li>Penurunan konsentrasi yang dapat memicu kecelakaan</li>
+    </ul>
+  </section>
+
+  <!-- Faktor Pencegah -->
+  <section id="faktor-pencegah">
+    <h2>Faktor-Faktor Pencegah Kecelakaan Kerja</h2>
+    <h3>1. Tingkat Manajemen & Organisasi (Strategi)</h3>
+    <ul>
+      <li>Komitmen manajemen yang nyata melalui inspeksi dan prioritas keselamatan.</li>
+      <li>Penerapan sistem manajemen K3 seperti SMK3/ISO 45001.</li>
+      <li>Pelatihan dan peningkatan kompetensi pekerja secara berkala.</li>
+      <li>Investigasi insiden tanpa budaya saling menyalahkan.</li>
+    </ul>
+
+    <h3>2. Tingkat Teknis & Lingkungan Kerja</h3>
+    <ul>
+      <li>Hierarki pengendalian risiko: eliminasi, substitusi, kontrol teknik, administrasi, dan APD.</li>
+      <li>Pemeliharaan peralatan secara rutin.</li>
+      <li>Latihan tanggap darurat dan simulasi kebakaran/gempa.</li>
+    </ul>
+
+    <h3>3. Tingkat Individu (Pekerja)</h3>
+    <ul>
+      <li>Partisipasi pekerja dalam penerapan K3.</li>
+      <li>Budaya keselamatan positif dan komunikasi efektif.</li>
+      <li>Program kesehatan dan manajemen stres kerja.</li>
+    </ul>
+
+    <h3>Pencegahan Berdasarkan Jenis Bahaya</h3>
+    <ul>
+      <li><b>Fisik:</b> Pelindung mesin, APD, sistem pembersihan lantai, dan earplug.</li>
+      <li><b>Kimia:</b> Gunakan masker respirator dan ventilasi memadai.</li>
+      <li><b>Biologi:</b> Sanitasi area kerja dan program pest control rutin.</li>
+      <li><b>Ergonomi:</b> Gunakan alat bantu angkat dan desain meja kerja ergonomis.</li>
+      <li><b>Psikososial:</b> Atur shift, istirahat cukup, dan lakukan briefing rutin.</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © {{ date('Y') }} Pentol Sejahtera — Bersama Mencegah, Bersama Aman.
+  </footer>
+
+</body>
+</html>
