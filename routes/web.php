@@ -14,3 +14,8 @@ Route::get('/penerapan-k3', function () {
     return view('penerapank3');
 });
 
+Route::get('/landasan-hukum', function () {
+    return view('LandasanHukum');
+});
+
+
