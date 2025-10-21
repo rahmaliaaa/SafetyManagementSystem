@@ -18,4 +18,6 @@ Route::get('/landasan-hukum', function () {
     return view('LandasanHukum');
 });
 
-
+Route::get('/sop', function () {
+    return view('sop');
+});

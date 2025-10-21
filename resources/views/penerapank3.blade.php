@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Pentol BALL - Sistem K3 (Layout, APD, Simulasi Kebakaran, Safety Talk)</title>
+    <title>Pentol BALL - Sistem K3 (Layout, Simulasi Kebakaran, Safety Talk)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
@@ -158,37 +158,6 @@
             text-align: center;
         }
 
-        /* APD Section Style */
-        .apd-item {
-            background: #fff;
-            border: 1px solid #e4e7ea;
-            border-radius: 8px;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        .apd-item img {
-            max-height: 120px;
-            width: auto;
-            margin-bottom: 10px;
-        }
-        .apd-title {
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 5px;
-            font-size: 1.1rem;
-        }
-        .apd-desc {
-            font-size: 0.9rem;
-            color: var(--muted);
-        }
-        .apd-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
         /* MODIFIKASI CSS UNTUK SIMULASI KEBAKARAN (BOX LEBIH BAGUS) */
         
         /* Box Pembungkus Langkah yang Diperbarui */
@@ -291,12 +260,11 @@
             <img src="logo-placeholder.png" alt="logo" onerror="this.style.display='none'">
             <div>
                 <div style="font-weight:800">Pentol BALL</div>
-                <div style="font-size:12px;color:#666">Sistem K3 — Layout | APD | Simulasi Kebakaran | Safety Talk</div>
+                <div style="font-size:12px;color:#666">Sistem K3 — Layout | Simulasi Kebakaran | Safety Talk</div>
             </div>
         </div>
         <nav>
             <a href="#layout">Layout</a>
-            <a href="#apd">APD</a>
             <a href="#simulasi">Simulasi Kebakaran</a>
             <a href="#safetalk">Safety Talk</a>
         </nav>
@@ -304,7 +272,7 @@
 
     <section class="hero">
         <h1>Penerapan (K3)</h1>
-        <p style="max-width:900px;margin:8px auto 0">Menampilkan layout area kerja, Alat Pelindung Diri (APD) wajib, prosedur simulasi kebakaran, serta pengumuman Safety Talk mingguan di PT Pentol BALL.</p>
+        <p style="max-width:900px;margin:8px auto 0">Menampilkan layout area kerja, prosedur simulasi kebakaran, serta pengumuman Safety Talk mingguan di PT Pentol BALL.</p>
     </section>
 
     <div class="container">
@@ -326,46 +294,6 @@
                     <li>🟢 <strong>Area Hijau</strong> – Menunjukkan lokasi <strong>APAR</strong>, <strong>P3K</strong>, dan <strong>titik kumpul evakuasi</strong>.</li>
                 </ul>
                 <p class="mt-3 fst-italic">💡 Tips: Pastikan seluruh karyawan mengetahui lokasi <strong>jalur evakuasi</strong> dan <strong>titik kumpul</strong> terdekat untuk menghadapi keadaan darurat.</p>
-            </div>
-        </div>
-        
-        <div class="card" id="apd">
-            <h4 class="section-title">Alat Pelindung Diri (APD) Wajib</h4>
-            <p>APD adalah garis pertahanan terakhir untuk melindungi pekerja dari bahaya di tempat kerja. Pastikan APD Anda selalu dalam kondisi baik dan digunakan dengan benar.</p>
-            
-            <div class="text-center mb-4">
-                <img src="image_c1443d.png" alt="Gambar Ilustrasi APD" style="max-width: 500px; width: 100%; border-radius: 8px;">
-            </div>
-
-            <div class="apd-grid">
-                <div class="apd-item">
-                    <div class="apd-title">1. Safety Helmet / Hair Net</div>
-                    <div class="apd-desc">Melindungi kepala dari benturan, kejatuhan benda, dan (untuk area makanan) mencegah kontaminasi produk oleh rambut.</div>
-                </div>
-                <div class="apd-item">
-                    <div class="apd-title">2. Safety Goggles / Kacamata Pelindung</div>
-                    <div class="apd-desc">Wajib digunakan di area penggorengan dan pencampuran bahan untuk melindungi mata dari percikan minyak panas, uap, atau bahan kimia.</div>
-                </div>
-                <div class="apd-item">
-                    <div class="apd-title">3. Safety Shoes / Sepatu Pengaman</div>
-                    <div class="apd-desc">Melindungi kaki dari kejatuhan benda berat, tertusuk, dan mengurangi risiko terpeleset karena lantai licin di area basah atau berminyak.</div>
-                </div>
-                <div class="apd-item">
-                    <div class="apd-title">4. Sarung Tangan Tahan Panas / Food Grade</div>
-                    <div class="apd-desc">Digunakan saat menangani bahan panas (penggorengan/perebusan) atau untuk menjaga higienitas produk (sarung tangan Food Grade).</div>
-                </div>
-                <div class="apd-item">
-                    <div class="apd-title">5. Masker Respirator</div>
-                    <div class="apd-desc">Melindungi sistem pernapasan dari uap panas, asap, atau partikel debu halus yang mungkin timbul saat proses pencampuran bahan kering.</div>
-                </div>
-                <div class="apd-item">
-                    <div class="apd-title">6. Wearpack / Apron Anti-Air</div>
-                    <div class="apd-desc">Pakaian kerja yang menutupi seluruh tubuh. Apron anti-air digunakan di area basah/pencucian untuk melindungi pakaian dan kulit dari cairan.</div>
-                </div>
-            </div>
-
-            <div class="alert alert-warning mt-4 text-center">
-                <p class="mb-0 fw-bold">Peringatan: Tidak menggunakan APD di zona wajib dapat dikenakan sanksi sesuai prosedur K3 perusahaan.</p>
             </div>
         </div>
         
