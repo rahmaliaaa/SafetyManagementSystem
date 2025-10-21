@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pentol Sejahtera - K3</title>
+  <title>Pentol BALL - K3</title>
   <style>
     /* 1. Reset Dasar */
     body {
@@ -207,8 +207,7 @@
 
   <header>
     <div style="display:flex; align-items:center;">
-      <img src="{{ asset('images/logo-pentol.png') }}" alt="Logo Pabrik Pentol">
-      <strong>Pentol Sejahtera</strong>
+      <strong>Pentol BALL</strong>
     </div>
     <nav>
       <a href="#program-k3">Program K3</a>
@@ -222,7 +221,7 @@
   </header>
 
   <section class="hero" id="hero">
-    <h1>Komitmen K3 Pentol Sejahtera</h1>
+    <h1>Komitmen K3 Pentol BALL</h1>
     <p>Keselamatan, Kualitas, Kepatuhan untuk semua karyawan</p>
   </section>
   <section id="program-k3">
@@ -283,7 +282,7 @@
   <footer>
     <div class="content-info">
         <div class="column">
-            <h4>Pentol Sejahtera</h4>
+            <h4>Pentol BALL</h4>
             <p>Pabrik Pentol Terbaik Se-Indonesia Raya.</p>
         </div>
         
@@ -307,7 +306,7 @@
     </div>
 
     <div class="copyright">
-      © {{ date('Y') }} Pentol Sejahtera. Semua Hak Dilindungi.
+      © {{ date('Y') }} Pentol BALL. Semua Hak Dilindungi.
     </div>
   </footer>
 

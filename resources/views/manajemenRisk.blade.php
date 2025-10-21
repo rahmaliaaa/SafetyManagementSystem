@@ -17,7 +17,7 @@
     header {
       background: #fff;
       border-bottom: 1px solid #ddd;
-      padding: 15px 30px;
+      padding: 12px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -26,14 +26,50 @@
       z-index: 1000;
     }
 
+    header .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     header img {
-      height: 40px;
+      height: 42px;
+    }
+
+    header .brand div {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    header .brand div strong {
+      font-size: 18px;
+      color: #333;
+    }
+
+    header .brand div small {
+      font-size: 12px;
+      color: #777;
+    }
+
+    /* Tombol Kembali */
+    .back-button {
+      text-decoration: none;
+      color: #007BFF !important;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      transition: all 0.2s;
+      white-space: nowrap;
       margin-right: 10px;
     }
 
-    header strong {
-      font-size: 18px;
-      color: #444;
+    .back-button:hover {
+      background-color: #e9ecef;
+      border-color: #ccc;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
 
     nav a {
@@ -52,9 +88,14 @@
     /* Hero */
     .hero {
       text-align: center;
-      padding: 80px 30px;
-      background: linear-gradient(135deg, #00C6FF, #007BFF);
+      padding: 200px 30px;
       color: #fff;
+      position: relative;
+      background-image: url('{{ asset('images/simulasi-kebakaran.jpg') }}');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      overflow: hidden;
     }
 
     .hero h1 {
@@ -111,9 +152,13 @@
 
   <!-- Header -->
   <header>
-    <div style="display:flex; align-items:center;">
-      <img src="{{ asset('images/logo-pentol.png') }}" alt="Logo Pabrik Pentol">
-      <strong>Pentol BALL</strong>
+    <div class="brand">
+      <a href="/" class="back-button" title="Kembali ke Halaman Utama">&larr; Kembali</a>
+      <img src="logo-placeholder.png" alt="Logo Pentol BALL" onerror="this.style.display='none'">
+      <div>
+        <strong>Pentol BALL</strong>
+        <small>Manajemen Risiko & Bahaya</small>
+      </div>
     </div>
     <nav>
       <a href="#identifikasi">Identifikasi Risiko</a>
@@ -239,7 +284,24 @@
 
   <!-- Footer -->
   <footer>
-    © {{ date('Y') }} Pentol Sejahtera — Bersama Mencegah, Bersama Aman.
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <p><strong>Pentol BALL</strong> — Keselamatan Dimulai dari Kesadaran.</p>
+      <p style="font-style: italic; color: #007BFF; margin: 10px 0;">
+        "Kualitas dan Keselamatan Adalah Rasa Utama Kami."
+      </p>
+     <p>
+                <strong>Alamat:</strong> Jl. Mawar No. 1<br>
+                <strong>Email:</strong> info@pentolBALL.com<br>
+                <strong>Telepon:</strong> +62 812 3456 7890
+            </p>
+      <div style="margin-top: 10px;">
+        <a href="https://www.instagram.com/pentolball" target="_blank" style="margin: 0 8px; color: #007BFF; text-decoration: none;">Instagram</a> |
+        <a href="https://www.facebook.com/pentolball" target="_blank" style="margin: 0 8px; color: #007BFF; text-decoration: none;">Facebook</a> |
+        <a href="https://www.tiktok.com/@pentolball" target="_blank" style="margin: 0 8px; color: #007BFF; text-decoration: none;">TikTok</a>
+      </div>
+      <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
+      <p style="color: #666;">© <span id="year"></span> Pentol BALL — Semua Hak Dilindungi.</p>
+    </div>
   </footer>
 
 </body>

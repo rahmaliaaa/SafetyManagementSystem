@@ -13,10 +13,11 @@
       line-height: 1.6;
     }
 
+    /* Header */
     header {
       background: #fff;
       border-bottom: 1px solid #ddd;
-      padding: 15px 30px;
+      padding: 12px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -26,14 +27,50 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
+    header .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     header img {
-      height: 40px;
+      height: 42px;
+    }
+
+    header .brand div {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    header .brand div strong {
+      font-size: 18px;
+      color: #333;
+    }
+
+    header .brand div small {
+      font-size: 12px;
+      color: #777;
+    }
+
+    /* Tombol Kembali */
+    .back-button {
+      text-decoration: none;
+      color: #007BFF !important;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      transition: all 0.2s;
+      white-space: nowrap;
       margin-right: 10px;
     }
 
-    header strong {
-      font-size: 18px;
-      color: #444;
+    .back-button:hover {
+      background-color: #e9ecef;
+      border-color: #ccc;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
 
     nav a {
@@ -46,7 +83,7 @@
 
     nav a:hover {
       color: #007BFF;
-      text-decoration: none;
+      text-decoration: underline;
     }
 
     .hero {
@@ -156,10 +193,15 @@
 </head>
 <body>
 
+  <!-- Header disamakan dengan manajemenrisk -->
   <header>
-    <div style="display:flex; align-items:center;">
-      <img src="{{ asset('images/logo-pentol.png') }}" alt="Logo Pabrik Pentol">
-      <strong>Pentol Sejahtera</strong>
+    <div class="brand">
+      <a href="/" class="back-button" title="Kembali ke Halaman Utama">&larr; Kembali</a>
+      <img src="logo-placeholder.png" alt="Logo Pentol BALL" onerror="this.style.display='none'">
+      <div>
+        <strong>Pentol BALL</strong>
+        <small>Landasan Hukum K3</small>
+      </div>
     </div>
     <nav>
       <a href="{{ url('/') }}">Beranda</a>
@@ -200,34 +242,24 @@
     </ul>
   </section>
 
-  <footer>
-    <div class="content-info">
-      <div class="column">
-        <h4>Pentol Sejahtera</h4>
-        <p>Pabrik Pentol Terbaik Se-Indonesia Raya.</p>
+ <footer>
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <p><strong>Pentol BALL</strong> — Keselamatan Dimulai dari Kesadaran.</p>
+      <p style="font-style: italic; color: #007BFF; margin: 10px 0;">
+        "Kualitas dan Keselamatan Adalah Rasa Utama Kami."
+      </p>
+     <p>
+        <strong>Alamat:</strong> Jl. Mawar No. 1<br>
+        <strong>Email:</strong> info@pentolBALL.com<br>
+        <strong>Telepon:</strong> +62 812 3456 7890
+      </p>
+      <div style="margin-top: 10px;">
+        <a href="https://www.instagram.com/pentolball" target="_blank" style="margin: 0 8px; color: #007BFF; text-decoration: none;">Instagram</a> |
+        <a href="https://www.facebook.com/pentolball" target="_blank" style="margin: 0 8px; color: #007BFF; text-decoration: none;">Facebook</a> |
+        <a href="https://www.tiktok.com/@pentolball" target="_blank" style="margin: 0 8px; color: #007BFF; text-decoration: none;">TikTok</a>
       </div>
-
-      <div class="column">
-        <h4>Link Cepat</h4>
-        <ul>
-          <li><a href="{{ url('/') }}" style="color: #ccc; text-decoration: none;">Beranda</a></li>
-          <li><a href="{{ url('/penerapan-k3') }}" style="color: #ccc; text-decoration: none;">Penerapan K3</a></li>
-          <li><a href="{{ url('/manajemen-risk') }}" style="color: #ccc; text-decoration: none;">Manajemen Risiko</a></li>
-        </ul>
-      </div>
-
-      <div class="column">
-        <h4>Hubungi Kami</h4>
-        <p>
-          <strong>Alamat:</strong> Jl. Mawar No. 1<br>
-          <strong>Email:</strong> info@pentolBALL.com<br>
-          <strong>Telepon:</strong> +62 812 3456 7890
-        </p>
-      </div>
-    </div>
-
-    <div class="copyright">
-      © {{ date('Y') }} Pentol Sejahtera. Semua Hak Dilindungi.
+      <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
+      <p style="color: #666;">© <span id="year"></span> Pentol BALL — Semua Hak Dilindungi.</p>
     </div>
   </footer>
 
