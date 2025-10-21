@@ -319,7 +319,18 @@
             font-size: 13px;
             color: var(--muted);
         }
-    </style>
+
+         /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #ddd;
+      margin-top: 30px;
+      background: #007BFF;
+      color: #ddd;
+    }
+
+        </style>
 </head>
 <body>
 
@@ -498,10 +509,6 @@
         
     </div>
 
-    <footer>
-        © <span id="year"></span> Pentol BALL — Bersama Mencegah, Bersama Aman.
-    </footer>
-
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -641,5 +648,28 @@
         renderReports();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer -->
+  <footer>
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <p><strong>Pentol BALL</strong> — Keselamatan Dimulai dari Kesadaran.</p>
+      <p style="font-style: italic; color: #007BFF; margin: 10px 0;">
+        "Kualitas dan Keselamatan Adalah Rasa Utama Kami."
+      </p>
+     <p>
+                <strong>Alamat:</strong> Jl. Mawar No. 1<br>
+                <strong>Email:</strong> info@pentolBALL.com<br>
+                <strong>Telepon:</strong> +62 812 3456 7890
+            </p>
+      <div style="margin-top: 10px;">
+        <a href="https://www.instagram.com/pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">Instagram</a> |
+        <a href="https://www.facebook.com/pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">Facebook</a> |
+        <a href="https://www.tiktok.com/@pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">TikTok</a>
+      </div>
+      <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
+      <p style="color: #ddd;">© <span id="year"></span> Pentol BALL — Semua Hak Dilindungi.</p>
+    </div>
+  </footer>
+
 </body>
 </html>

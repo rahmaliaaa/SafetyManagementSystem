@@ -163,12 +163,16 @@
       background: #0056b3;
     }
 
-    /* 5. Footer */
+         /* Footer */
     footer {
-      background: #333;
-      color: #eee;
-      padding: 30px 30px;
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #ddd;
+      margin-top: 30px;
+      background: #007BFF;
+      color: #ddd;
     }
+
     
     footer .content-info {
         display: flex;
@@ -279,36 +283,28 @@
     </form>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <div class="content-info">
-        <div class="column">
-            <h4>Pentol BALL</h4>
-            <p>Pabrik Pentol Terbaik Se-Indonesia Raya.</p>
-        </div>
-        
-        <div class="column">
-            <h4>Link Cepat</h4>
-            <ul>
-                <li><a href="#program-k3" style="color: #ccc; text-decoration: none;">Program K3</a></li>
-                <li><a href="#statistik" style="color: #ccc; text-decoration: none;">Statistik</a></li>
-                <li><a href="#laporan" style="color: #ccc; text-decoration: none;">Laporan</a></li>
-            </ul>
-        </div>
-        
-        <div class="column">
-            <h4>Hubungi Kami</h4>
-            <p>
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <p><strong>Pentol BALL</strong> — Keselamatan Dimulai dari Kesadaran.</p>
+      <p style="font-style: italic; color: #007BFF; margin: 10px 0;">
+        "Kualitas dan Keselamatan Adalah Rasa Utama Kami."
+      </p>
+     <p>
                 <strong>Alamat:</strong> Jl. Mawar No. 1<br>
                 <strong>Email:</strong> info@pentolBALL.com<br>
                 <strong>Telepon:</strong> +62 812 3456 7890
             </p>
-        </div>
-    </div>
-
-    <div class="copyright">
-      © {{ date('Y') }} Pentol BALL. Semua Hak Dilindungi.
+      <div style="margin-top: 10px;">
+        <a href="https://www.instagram.com/pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">Instagram</a> |
+        <a href="https://www.facebook.com/pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">Facebook</a> |
+        <a href="https://www.tiktok.com/@pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">TikTok</a>
+      </div>
+      <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
+      <p style="color: #ddd;">© <span id="year"></span> Pentol BALL — Semua Hak Dilindungi.</p>
     </div>
   </footer>
+
 
 </body>
 </html>

@@ -152,11 +152,16 @@
       margin-bottom: 15px;
     }
 
+     /* Footer */
     footer {
-      background: #333;
-      color: #eee;
-      padding: 30px 30px;
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #ddd;
+      margin-top: 30px;
+      background: #007BFF;
+      color: #ddd;
     }
+
 
     footer .content-info {
       display: flex;
@@ -242,24 +247,25 @@
     </ul>
   </section>
 
- <footer>
+ <!-- Footer -->
+  <footer>
     <div style="max-width: 900px; margin: 0 auto; text-align: center;">
       <p><strong>Pentol BALL</strong> — Keselamatan Dimulai dari Kesadaran.</p>
       <p style="font-style: italic; color: #007BFF; margin: 10px 0;">
         "Kualitas dan Keselamatan Adalah Rasa Utama Kami."
       </p>
      <p>
-        <strong>Alamat:</strong> Jl. Mawar No. 1<br>
-        <strong>Email:</strong> info@pentolBALL.com<br>
-        <strong>Telepon:</strong> +62 812 3456 7890
-      </p>
+                <strong>Alamat:</strong> Jl. Mawar No. 1<br>
+                <strong>Email:</strong> info@pentolBALL.com<br>
+                <strong>Telepon:</strong> +62 812 3456 7890
+            </p>
       <div style="margin-top: 10px;">
-        <a href="https://www.instagram.com/pentolball" target="_blank" style="margin: 0 8px; color: #007BFF; text-decoration: none;">Instagram</a> |
-        <a href="https://www.facebook.com/pentolball" target="_blank" style="margin: 0 8px; color: #007BFF; text-decoration: none;">Facebook</a> |
-        <a href="https://www.tiktok.com/@pentolball" target="_blank" style="margin: 0 8px; color: #007BFF; text-decoration: none;">TikTok</a>
+        <a href="https://www.instagram.com/pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">Instagram</a> |
+        <a href="https://www.facebook.com/pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">Facebook</a> |
+        <a href="https://www.tiktok.com/@pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">TikTok</a>
       </div>
       <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
-      <p style="color: #666;">© <span id="year"></span> Pentol BALL — Semua Hak Dilindungi.</p>
+      <p style="color: #ddd;">© <span id="year"></span> Pentol BALL — Semua Hak Dilindungi.</p>
     </div>
   </footer>
 

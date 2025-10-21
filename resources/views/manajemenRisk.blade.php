@@ -143,9 +143,11 @@
       padding: 20px;
       border-top: 1px solid #ddd;
       margin-top: 30px;
-      background: #fff;
-      color: #666;
+      background: #007BFF;
+      color: #ddd;
     }
+
+    
   </style>
 </head>
 <body>
@@ -295,12 +297,12 @@
                 <strong>Telepon:</strong> +62 812 3456 7890
             </p>
       <div style="margin-top: 10px;">
-        <a href="https://www.instagram.com/pentolball" target="_blank" style="margin: 0 8px; color: #007BFF; text-decoration: none;">Instagram</a> |
-        <a href="https://www.facebook.com/pentolball" target="_blank" style="margin: 0 8px; color: #007BFF; text-decoration: none;">Facebook</a> |
-        <a href="https://www.tiktok.com/@pentolball" target="_blank" style="margin: 0 8px; color: #007BFF; text-decoration: none;">TikTok</a>
+        <a href="https://www.instagram.com/pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">Instagram</a> |
+        <a href="https://www.facebook.com/pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">Facebook</a> |
+        <a href="https://www.tiktok.com/@pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">TikTok</a>
       </div>
       <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
-      <p style="color: #666;">© <span id="year"></span> Pentol BALL — Semua Hak Dilindungi.</p>
+      <p style="color: #ddd;">© <span id="year"></span> Pentol BALL — Semua Hak Dilindungi.</p>
     </div>
   </footer>
 
