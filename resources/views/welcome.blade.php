@@ -249,6 +249,27 @@
     </ol>
   </section>
 
+  <section id="landasan-hukum-preview">
+  <h2>Landasan Hukum K3</h2>
+  <p style="max-width: 800px; margin: 0 auto; text-align: left;">
+    Untuk mendukung penerapan Keselamatan dan Kesehatan Kerja (K3) di pabrik pengolahan makanan seperti pabrik pentol, 
+    terdapat beberapa regulasi penting yang menjadi dasar hukum, antara lain:
+  </p>
+  <ul style="max-width: 800px; margin: 20px auto; text-align: left; padding-left: 40px;">
+    <li><strong>Undang-Undang No. 1 Tahun 1970 tentang Keselamatan Kerja</strong> — dasar utama penerapan K3 di semua tempat kerja agar pekerja terlindungi dari kecelakaan dan penyakit akibat kerja.</li>
+    <li><strong>Undang-Undang No. 13 Tahun 2003 tentang Ketenagakerjaan</strong> — menjamin hak pekerja atas keselamatan, kesehatan kerja, dan lingkungan kerja yang layak.</li>
+    <li><strong>Peraturan Pemerintah No. 50 Tahun 2012 tentang SMK3</strong> — mengatur kewajiban perusahaan dalam menerapkan sistem manajemen K3.</li>
+  </ul>
+
+  <div style="margin-top: 30px;">
+    <a href="{{ url('/landasan-hukum') }}" 
+       style="background: #007BFF; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: background 0.3s;">
+      Pelajari Selengkapnya →
+    </a>
+  </div>
+</section>
+
+
   <section id="laporan">
     <h2>Laporan Insiden</h2>
     <form method="POST">
