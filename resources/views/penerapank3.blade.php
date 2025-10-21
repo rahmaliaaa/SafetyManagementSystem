@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Pentol BALL - Sistem K3 (Layout, Simulasi Kebakaran, Safety Talk)</title>
+    <title>Pentol BALL - Sistem K3 (Layout, APD, Simulasi Kebakaran, Safety Talk)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
@@ -11,6 +11,7 @@
             --bg: #f4f6f8;
             --card: #fff;
             --muted: #666;
+            --success: #2b9348;
         }
 
         body {
@@ -93,15 +94,16 @@
         }
 
         .section-title {
-            color: #007BFF;
+            color: var(--primary);
             font-weight: 600;
-            border-left: 5px solid #007BFF;
+            border-left: 5px solid var(--primary);
             padding-left: 10px;
             margin-bottom: 12px;
         }
 
         .layout-img {
             width: 90%;
+            max-width: 700px;
             border: 2px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -109,13 +111,13 @@
         }
 
         .layout-img:hover {
-            transform: scale(1.05);
+            transform: scale(1.01);
         }
 
         /* Layout Info Box */
         .layout-info {
             background-color: #eef7f2;
-            border-left: 6px solid #2b9348;
+            border-left: 6px solid var(--success);
             padding: 16px 20px;
             border-radius: 10px;
             margin-top: 15px;
@@ -140,7 +142,7 @@
         }
 
         .layout-info strong {
-            color: #1e7a35;
+            color: var(--success);
         }
 
         .layout-info h5 {
@@ -156,168 +158,115 @@
             text-align: center;
         }
 
-        /* Step-by-step Timeline Style */
-        .timeline-step {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
+        /* APD Section Style */
+        .apd-item {
+            background: #fff;
+            border: 1px solid #e4e7ea;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .apd-item img {
+            max-height: 120px;
+            width: auto;
+            margin-bottom: 10px;
+        }
+        .apd-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        .apd-desc {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+        .apd-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
 
-        .timeline-step .icon-container {
-            width: 40px;
-            height: 40px;
-            min-width: 40px;
-            background: #007bff;
-            color: white;
+        /* MODIFIKASI CSS UNTUK SIMULASI KEBAKARAN (BOX LEBIH BAGUS) */
+        
+        /* Box Pembungkus Langkah yang Diperbarui */
+        .timeline-step-card {
+            background: var(--card); /* Kartu putih bersih */
+            border: 1px solid #ddd;
+            border-left: 6px solid var(--primary); /* Garis Biru yang Tegas */
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Bayangan yang lebih dalam */
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            transition: all 0.3s ease; /* Transisi untuk efek hover */
+        }
+
+        /* Efek Hover untuk Step Card */
+        .timeline-step-card:hover {
+            transform: translateY(-5px); /* Sedikit terangkat */
+            border-left-color: #ffaa00; /* Ganti warna garis kiri saat di-hover (Oranye) */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Bayangan sedikit lebih besar */
+        }
+
+        /* Ikon Angka dengan Gradasi */
+        .timeline-step-card .icon-container {
+            flex-shrink: 0;
+            width: 45px; /* Ukuran lebih besar */
+            height: 45px;
             border-radius: 50%;
+            /* Gradasi Biru ke Cyan untuk tampilan modern */
+            background: linear-gradient(45deg, var(--primary), #00c6ff); 
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-weight: 700;
-            font-size: 18px;
-            margin-right: 15px;
-            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
-            position: relative;
-            z-index: 10;
+            font-weight: 800; /* Lebih tebal */
+            font-size: 1.3rem; /* Lebih besar */
+            border: 4px solid #e9f0ff; /* Border tebal di luar lingkaran */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Bayangan pada ikon */
         }
-
-        .timeline-step:not(:last-child) .icon-container::after {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 40px; /* Jarak antar step */
-            background: #ccc;
-            z-index: 1;
-        }
-
+        
+        /* Konten Langkah */
         .timeline-step-content {
             flex-grow: 1;
-            padding: 10px 15px;
-            border-radius: 8px;
-            background: #f0f8ff;
-            border-left: 5px solid #007bff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         .timeline-step-content strong {
             display: block;
-            color: #007bff;
-            margin-bottom: 5px;
-            font-size: 1.1em;
+            margin-bottom: 8px;
+            color: #222;
+            font-size: 1.25rem; /* Judul lebih besar */
+            font-weight: 700;
         }
+
         .timeline-step-content ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            font-size: 0.95em;
+            padding-left: 20px;
+            margin-top: 5px;
+            margin-bottom: 0;
+            list-style: disc;
+            color: var(--muted); /* Warna teks daftar lebih kalem */
         }
+
         .timeline-step-content li {
-            margin-bottom: 5px;
-            padding-left: 15px;
-            position: relative;
+            margin-bottom: 4px;
+            font-size: 1rem;
+            color: #444; /* Warna teks list lebih jelas */
         }
-        .timeline-step-content li::before {
-            content: "•";
-            color: #007bff;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-
-
+        /* Akhir Modifikasi CSS Simulasi Kebakaran */
+        
         footer {
             text-align: center;
-            color: var(--muted);
-            padding: 14px 0;
-            border-top: 1px solid #e4e7ea;
+            padding: 20px;
             margin-top: 30px;
-        }
-
-        /* HAPUS/NONAKTIFKAN GRID 2-KOLOM KARENA KONTEN AKAN DIBUAT 1 KOLOM */
-        /*
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 420px;
-            gap: 20px;
-        }
-
-        @media(max-width:980px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        */
-
-        /* Form & button styles */
-        .form-row {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
-
-        input,
-        textarea {
-            flex: 1;
-            padding: 8px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            font-family: inherit;
-        }
-
-        textarea {
-            min-height: 80px;
-            resize: vertical;
-        }
-
-        button {
-            padding: 8px 12px;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        button.primary {
-            background: #007BFF;
-            color: #fff;
-        }
-
-        button.ghost {
-            background: transparent;
-            border: 1px solid #ccc;
-        }
-
-        button.warn {
-            background: #ff7043;
-            color: #fff;
-        }
-
-        /* Menghapus max-height agar card Safety Talk hanya sepanjang kontennya */
-        .reports-list {
-            overflow: visible; 
-            max-height: none; 
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .report-item {
-            border-radius: 6px;
-            padding: 10px;
-            border: 1px solid #eef2f5;
-            background: #fcfeff;
-        }
-
-        .report-item .meta {
-            display: flex;
-            justify-content: space-between;
-            gap: 8px;
-            font-size: 13px;
+            background-color: #e9ecef;
             color: var(--muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #ddd;
         }
 
          /* Footer */
@@ -342,11 +291,12 @@
             <img src="logo-placeholder.png" alt="logo" onerror="this.style.display='none'">
             <div>
                 <div style="font-weight:800">Pentol BALL</div>
-                <div style="font-size:12px;color:#666">Sistem K3 — Layout | Simulasi Kebakaran | Safety Talk</div>
+                <div style="font-size:12px;color:#666">Sistem K3 — Layout | APD | Simulasi Kebakaran | Safety Talk</div>
             </div>
         </div>
         <nav>
             <a href="#layout">Layout</a>
+            <a href="#apd">APD</a>
             <a href="#simulasi">Simulasi Kebakaran</a>
             <a href="#safetalk">Safety Talk</a>
         </nav>
@@ -354,10 +304,11 @@
 
     <section class="hero">
         <h1>Penerapan (K3)</h1>
-        <p style="max-width:900px;margin:8px auto 0">Menampilkan layout area kerja, prosedur simulasi kebakaran, serta laporan Safety Talk mingguan di PT Pentol BALL.</p>
+        <p style="max-width:900px;margin:8px auto 0">Menampilkan layout area kerja, Alat Pelindung Diri (APD) wajib, prosedur simulasi kebakaran, serta pengumuman Safety Talk mingguan di PT Pentol BALL.</p>
     </section>
 
     <div class="container">
+        
         <div class="card" id="layout">
             <h4 class="section-title">Layout K3</h4>
             <p>Berikut merupakan layout area kerja yang menunjukkan posisi alat pemadam kebakaran (APAR), jalur evakuasi, titik kumpul, dan area berisiko tinggi.</p>
@@ -377,7 +328,47 @@
                 <p class="mt-3 fst-italic">💡 Tips: Pastikan seluruh karyawan mengetahui lokasi <strong>jalur evakuasi</strong> dan <strong>titik kumpul</strong> terdekat untuk menghadapi keadaan darurat.</p>
             </div>
         </div>
+        
+        <div class="card" id="apd">
+            <h4 class="section-title">Alat Pelindung Diri (APD) Wajib</h4>
+            <p>APD adalah garis pertahanan terakhir untuk melindungi pekerja dari bahaya di tempat kerja. Pastikan APD Anda selalu dalam kondisi baik dan digunakan dengan benar.</p>
+            
+            <div class="text-center mb-4">
+                <img src="image_c1443d.png" alt="Gambar Ilustrasi APD" style="max-width: 500px; width: 100%; border-radius: 8px;">
+            </div>
 
+            <div class="apd-grid">
+                <div class="apd-item">
+                    <div class="apd-title">1. Safety Helmet / Hair Net</div>
+                    <div class="apd-desc">Melindungi kepala dari benturan, kejatuhan benda, dan (untuk area makanan) mencegah kontaminasi produk oleh rambut.</div>
+                </div>
+                <div class="apd-item">
+                    <div class="apd-title">2. Safety Goggles / Kacamata Pelindung</div>
+                    <div class="apd-desc">Wajib digunakan di area penggorengan dan pencampuran bahan untuk melindungi mata dari percikan minyak panas, uap, atau bahan kimia.</div>
+                </div>
+                <div class="apd-item">
+                    <div class="apd-title">3. Safety Shoes / Sepatu Pengaman</div>
+                    <div class="apd-desc">Melindungi kaki dari kejatuhan benda berat, tertusuk, dan mengurangi risiko terpeleset karena lantai licin di area basah atau berminyak.</div>
+                </div>
+                <div class="apd-item">
+                    <div class="apd-title">4. Sarung Tangan Tahan Panas / Food Grade</div>
+                    <div class="apd-desc">Digunakan saat menangani bahan panas (penggorengan/perebusan) atau untuk menjaga higienitas produk (sarung tangan Food Grade).</div>
+                </div>
+                <div class="apd-item">
+                    <div class="apd-title">5. Masker Respirator</div>
+                    <div class="apd-desc">Melindungi sistem pernapasan dari uap panas, asap, atau partikel debu halus yang mungkin timbul saat proses pencampuran bahan kering.</div>
+                </div>
+                <div class="apd-item">
+                    <div class="apd-title">6. Wearpack / Apron Anti-Air</div>
+                    <div class="apd-desc">Pakaian kerja yang menutupi seluruh tubuh. Apron anti-air digunakan di area basah/pencucian untuk melindungi pakaian dan kulit dari cairan.</div>
+                </div>
+            </div>
+
+            <div class="alert alert-warning mt-4 text-center">
+                <p class="mb-0 fw-bold">Peringatan: Tidak menggunakan APD di zona wajib dapat dikenakan sanksi sesuai prosedur K3 perusahaan.</p>
+            </div>
+        </div>
+        
         <div class="card" id="simulasi">
             <h4 class="section-title">Simulasi Kebakaran</h4>
 
@@ -386,14 +377,6 @@
                 <p>Kebakaran di lingkungan kerja merupakan ancaman serius yang dapat mengakibatkan kerugian materi, bahkan korban jiwa.
                     Untuk mencegahnya, memahami identifikasi potensi bahaya kebakaran dan pengendaliannya menjadi sangat penting.
                     Melalui pemahaman ini, kita dapat menciptakan lingkungan kerja yang aman dan nyaman bagi semua.</p>
-
-                <p>Keselamatan dan Kesehatan Kerja (K3) merupakan aspek penting dalam setiap lingkungan kerja, terutama dalam konteks pencegahan kebakaran.
-                    K3 bertujuan untuk menciptakan lingkungan kerja yang aman dan sehat bagi seluruh pekerja, dengan meminimalisir risiko kecelakaan,
-                    termasuk kebakaran.</p>
-
-                <p>Mengenali potensi bahaya kebakaran dan menerapkan langkah pengendaliannya merupakan hal penting dalam K3.
-                    Penerapan K3 yang efektif dapat membantu mencegah kebakaran, melindungi pekerja dari bahaya kebakaran,
-                    dan meminimalisir kerugian finansial serta dampak lingkungan.</p>
 
                 <p><strong>Kebakaran dapat dipicu oleh berbagai faktor</strong>, yang dapat dikategorikan menjadi tiga kelompok utama, yaitu:</p>
                 <ul>
@@ -404,16 +387,14 @@
             </div>
 
             <div class="text-center">
-                <img src="{{ asset('images/simulasi-kebakaran.jpg') }}"
-                    alt="Layout Area Kerja K3"
-                    class="layout-img mb-3">
+                <img src="{{ asset('images/simulasi-kebakaran.jpg') }}" alt="Ilustrasi Simulasi Kebakaran" class="layout-img mb-3">
             </div>
             <p class="mt-4">Kegiatan simulasi kebakaran dilakukan untuk meningkatkan kesiapsiagaan karyawan dalam menghadapi keadaan darurat.
                 Berikut langkah-langkahnya:</p>
 
             <div class="steps-container mt-4">
 
-                <div class="timeline-step">
+                <div class="timeline-step-card step-1">
                     <div class="icon-container">1</div>
                     <div class="timeline-step-content">
                         <strong>Deteksi dan Alarm (Tahap Awal)</strong>
@@ -424,8 +405,8 @@
                         </ul>
                     </div>
                 </div>
-
-                <div class="timeline-step">
+                
+                <div class="timeline-step-card step-2">
                     <div class="icon-container">2</div>
                     <div class="timeline-step-content">
                         <strong>Upaya Pemadaman Dini (Jika Skala Kecil)</strong>
@@ -436,7 +417,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-step">
+                <div class="timeline-step-card step-3">
                     <div class="icon-container">3</div>
                     <div class="timeline-step-content">
                         <strong>Evakuasi</strong>
@@ -451,7 +432,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-step">
+                <div class="timeline-step-card step-4">
                     <div class="icon-container">4</div>
                     <div class="timeline-step-content">
                         <strong>Penanganan oleh Tim Darurat dan Pemadam Kebakaran</strong>
@@ -464,7 +445,7 @@
                     </div>
                 </div>
 
-                <div class="timeline-step">
+                <div class="timeline-step-card step-5">
                     <div class="icon-container">5</div>
                     <div class="timeline-step-content">
                         <strong>Pasca Kebakaran</strong>
@@ -477,6 +458,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="alert alert-success mt-4 text-center" role="alert">
                 💡 <strong>Tips:</strong> Pastikan semua karyawan mengetahui lokasi APAR, jalur evakuasi, dan titik kumpul.
                 Lakukan pelatihan kebakaran secara rutin minimal dua kali dalam setahun.
@@ -484,168 +466,83 @@
         </div>
 
         <div class="card" id="safetalk">
-            <h2>Safety Talk Mingguan (Report)</h2>
-            <p class="text-muted">Tambahkan laporan Safety Talk, simpan ke localStorage, edit/hapus, dan ekspor CSV.</p>
+            <h4 class="section-title">Pengumuman Safety Talk Mingguan 📣</h4>
+            <p class="text-muted">Ayo tingkatkan kesadaran K3! Bersiaplah untuk Safety Talk mingguan yang akan datang.</p>
 
-            <div class="form-row">
-                <input type="text" id="talkTitle" placeholder="Judul Safety Talk (mis. Kebakaran & Evakuasi)">
-                <input type="date" id="talkDate">
-            </div>
-            <div class="form-row">
-                <input type="text" id="talkFacilitator" placeholder="Fasilitator / PIC">
-                <input type="text" id="talkParticipants" placeholder="Peserta (mis. Produksi, QC)">
-            </div>
-            <textarea id="talkSummary" placeholder="Ringkasan pembahasan dan tindakan yang disepakati"></textarea>
+            <div class="alert alert-info shadow-sm p-4 rounded-4 text-center">
+                <h5 class="fw-bold mb-3" style="color:#007BFF">Safety Talk Berikut: Tingkatkan Kewaspadaan!</h5>
 
-            <div style="display:flex; gap:8px; margin-top:8px;">
-                <button id="saveTalk" class="primary">Simpan Laporan</button>
-                <button id="clearAll" class="ghost">Hapus Semua</button>
-                <button id="exportCsv" class="ghost">Ekspor CSV</button>
-            </div>
+                <div id="safetyTalkSchedule">
+                    <h2 id="talkTheme" class="mb-2" style="font-size: 1.8rem;">[Tema Akan Diisi JavaScript]</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 5px;">
+                        📅 Tanggal: <span id="talkDateDisplay" class="fw-bold">[Tanggal Akan Diisi JavaScript]</span>
+                    </p>
+                    <p style="font-size: 1.1rem; margin-bottom: 15px;">
+                        ⏰ Waktu: <span id="talkTimeDisplay" class="fw-bold">[Waktu Akan Diisi JavaScript]</span>
+                    </p>
 
-            <h3 style="margin-top:16px;">Daftar Laporan</h3>
-            <div class="reports-list" id="reportsList"></div>
+                    <div style="padding: 15px 20px; background-color: #e9f0ff; border-radius: 8px; border: 1px solid #b3ccff;">
+                        <p class="mb-2 fw-bold text-dark">Waktu Tersisa Menuju Safety Talk:</p>
+                        <div id="countdown" class="fw-bolder" style="font-size: 2.5rem; color: #007BFF;">
+                            Memuat...
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <p class="mt-3 fst-italic text-muted" style="font-size: 0.9rem;">
+                    *Kehadiran wajib bagi seluruh Staf Produksi, Gudang, dan Quality Control.
+                </p>
+            </div>
         </div>
-        
     </div>
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        function uuid() {
-            return 'r-' + Date.now() + '-' + Math.random().toString(36).slice(2, 9);
-        }
-        const reportsKey = 'k3_safetalk_reports';
+        // --- FUNGSI UNTUK SAFETY TALK ANNOUNCEMENT ---
 
-        function getReports() {
-            try {
-                return JSON.parse(localStorage.getItem(reportsKey) || '[]');
-            } catch (e) {
-                return []
-            }
-        }
+        // Definisikan jadwal Safety Talk (Tanggal dan Waktu)
+        // Ganti tanggal dan waktu di bawah ini ke jadwal Safety Talk yang Anda inginkan.
+        // Format Target Date: YYYY-MM-DDTHH:MM:SS. 
+        const scheduledDate = "2025-10-24T08:00:00"; // Contoh: Jumat, 24 Oktober 2025, jam 08:00
+        const scheduleTheme = "Kebakaran & Evakuasi di Area Produksi";
+        const scheduleDateDisplay = "Jumat, 24 Oktober 2025";
+        const scheduleTimeDisplay = "08:00 - 08:30 WIB";
 
-        function saveReports(list) {
-            localStorage.setItem(reportsKey, JSON.stringify(list));
-            renderReports();
-        }
+        // Update elemen HTML dengan detail jadwal
+        document.getElementById('talkTheme').textContent = scheduleTheme;
+        document.getElementById('talkDateDisplay').textContent = scheduleDateDisplay;
+        document.getElementById('talkTimeDisplay').textContent = scheduleTimeDisplay;
 
-        function escapeHtml(s = '') {
-            return String(s).replace(/[&<>"']/g, (m) => ({
-                '&': '&amp;',
-                '<': '&lt;',
-                '>': '&gt;',
-                '"': '&quot;',
-                "'": '&#39;'
-            }[m]));
-        }
+        // Fungsi untuk menghitung mundur
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const targetDate = new Date(scheduledDate).getTime();
+            const distance = targetDate - now;
 
-        function renderReports() {
-            const c = document.getElementById('reportsList');
-            c.innerHTML = '';
-            const list = getReports().slice().reverse();
-            if (!list.length) {
-                c.innerHTML = '<div class="text-muted">Belum ada laporan. Tambahkan Safety Talk baru.</div>';
+            const countdownElement = document.getElementById('countdown');
+
+            if (distance < 0) {
+                // Setelah waktu berakhir
+                countdownElement.innerHTML = "<strong>SEDANG BERLANGSUNG!</strong>";
+                clearInterval(countdownInterval);
                 return;
             }
-            list.forEach(item => {
-                const div = document.createElement('div');
-                div.className = 'report-item';
-                div.innerHTML = `
-                <div style="display:flex; justify-content:space-between; align-items:center">
-                    <div>
-                        <div style="font-weight:700">${escapeHtml(item.title)}</div>
-                        <div class="text-muted">${item.date} — Fasilitator: ${escapeHtml(item.facilitator)}</div>
-                    </div>
-                    <div style="display:flex; gap:8px;">
-                        <button onclick="editReport('${item.id}')">Edit</button>
-                        <button onclick="deleteReport('${item.id}')" class="ghost">Hapus</button>
-                    </div>
-                </div>
-                <div style="margin-top:8px">${escapeHtml(item.summary)}</div>
-                <div class="meta text-muted">Peserta: ${escapeHtml(item.participants)}</div>
-            `;
-                c.appendChild(div);
-            });
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Format output hitungan mundur
+            countdownElement.innerHTML = 
+                `${days} Hari : ${hours.toString().padStart(2, '0')} Jam : ${minutes.toString().padStart(2, '0')} Menit : ${seconds.toString().padStart(2, '0')} Detik`;
         }
 
-        function editReport(id) {
-            const list = getReports();
-            const item = list.find(r => r.id === id);
-            if (!item) return;
-            document.getElementById('talkTitle').value = item.title;
-            document.getElementById('talkDate').value = item.date;
-            document.getElementById('talkFacilitator').value = item.facilitator;
-            document.getElementById('talkParticipants').value = item.participants;
-            document.getElementById('talkSummary').value = item.summary;
-            const newList = list.filter(r => r.id !== id);
-            saveReports(newList);
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-        window.editReport = editReport;
-
-        function deleteReport(id) {
-            if (!confirm('Hapus laporan ini?')) return;
-            const newList = getReports().filter(r => r.id !== id);
-            saveReports(newList);
-        }
-        window.deleteReport = deleteReport;
-
-        document.getElementById('saveTalk').addEventListener('click', () => {
-            const title = document.getElementById('talkTitle').value.trim();
-            const date = document.getElementById('talkDate').value || new Date().toISOString().slice(0, 10);
-            const facilitator = document.getElementById('talkFacilitator').value.trim();
-            const participants = document.getElementById('talkParticipants').value.trim();
-            const summary = document.getElementById('talkSummary').value.trim();
-            if (!title || !summary) {
-                alert('Isi minimal Judul dan Ringkasan.');
-                return;
-            }
-            const list = getReports();
-            list.push({
-                id: uuid(),
-                title,
-                date,
-                facilitator,
-                participants,
-                summary
-            });
-            saveReports(list);
-            document.getElementById('talkTitle').value = '';
-            document.getElementById('talkDate').value = '';
-            document.getElementById('talkFacilitator').value = '';
-            document.getElementById('talkParticipants').value = '';
-            document.getElementById('talkSummary').value = '';
-        });
-
-        document.getElementById('clearAll').addEventListener('click', () => {
-            if (!confirm('Hapus semua laporan?')) return;
-            saveReports([]);
-        });
-
-        document.getElementById('exportCsv').addEventListener('click', () => {
-            const list = getReports();
-            if (!list.length) {
-                alert('Tidak ada data untuk diekspor.');
-                return;
-            }
-            const hdr = ['id', 'date', 'title', 'facilitator', 'participants', 'summary'];
-            const rows = [hdr.join(',')].concat(list.map(r => hdr.map(k => `"${String(r[k]||'').replace(/"/g,'""')}"`).join(',')));
-            const csv = rows.join('\n');
-            const blob = new Blob([csv], {
-                type: 'text/csv'
-            });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'safetalk_reports.csv';
-            a.click();
-            URL.revokeObjectURL(url);
-        });
-        renderReports();
+        // Jalankan hitungan mundur setiap 1 detik
+        updateCountdown();
+        const countdownInterval = setInterval(updateCountdown, 1000);
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
