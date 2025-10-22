@@ -228,35 +228,25 @@
         }
         /* Akhir Modifikasi CSS Simulasi Kebakaran */
         
+        /* Footer */
         footer {
             text-align: center;
             padding: 20px;
-            margin-top: 30px;
-            background-color: #e9ecef;
-            color: var(--muted);
-            font-size: 0.9rem;
             border-top: 1px solid #ddd;
+            margin-top: 30px;
+            background: #007BFF;
+            color: #ddd;
         }
-
-         /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      border-top: 1px solid #ddd;
-      margin-top: 30px;
-      background: #007BFF;
-      color: #ddd;
-    }
-
-        </style>
+    </style>
 </head>
 <body>
 
     <header>
         <div class="brand">
             <a href="/" class="back-button" title="Kembali ke Halaman Utama">
-                &larr; Kembali</a>
-             <img src="{{ asset('images/Ball.png') }}" alt="Logo Pentol BALL">
+                &larr; Kembali
+            </a>
+            <img src="logo-placeholder.png" alt="logo" onerror="this.style.display='none'">
             <div>
                 <div style="font-weight:800">Pentol BALL</div>
                 <div style="font-size:12px;color:#666">Sistem K3 — Layout | Simulasi Kebakaran | Safety Talk</div>
@@ -270,7 +260,7 @@
     </header>
 
     <section class="hero">
-        <h1>Penerapan (K3)</h1>
+        <h1>Penerapan Keselamatan dan Kesehatan Kerja (K3)</h1>
         <p style="max-width:900px;margin:8px auto 0">Menampilkan layout area kerja, prosedur simulasi kebakaran, serta pengumuman Safety Talk mingguan di PT Pentol BALL.</p>
     </section>
 
@@ -281,7 +271,7 @@
             <p>Berikut merupakan layout area kerja yang menunjukkan posisi alat pemadam kebakaran (APAR), jalur evakuasi, titik kumpul, dan area berisiko tinggi.</p>
 
             <div class="text-center">
-                <img src="{{ asset('images/layout-pentol.jpg') }}" alt="Layout Area Kerja K3" class="layout-img mb-3">
+                <img src="{{ asset('images/layout-pentol.jpg') }}" alt="Layout Area Kerja K3" class="layout-img mb-3"> 
             </div>
 
             <div class="layout-info shadow-sm">
@@ -314,7 +304,7 @@
             </div>
 
             <div class="text-center">
-                <img src="{{ asset('images/simulasi-kebakaran.jpg') }}" alt="Ilustrasi Simulasi Kebakaran" class="layout-img mb-3">
+                <img src="{{ asset('images/simulasi-kebakaran.jpg') }}" alt="Simulasi Kebakaran" class="layout-img mb-3">
             </div>
             <p class="mt-4">Kegiatan simulasi kebakaran dilakukan untuk meningkatkan kesiapsiagaan karyawan dalam menghadapi keadaan darurat.
                 Berikut langkah-langkahnya:</p>
@@ -400,12 +390,12 @@
                 <h5 class="fw-bold mb-3" style="color:#007BFF">Safety Talk Berikut: Tingkatkan Kewaspadaan!</h5>
 
                 <div id="safetyTalkSchedule">
-                    <h2 id="talkTheme" class="mb-2" style="font-size: 1.8rem;">[Tema Akan Diisi JavaScript]</h2>
+                    <h2 id="talkTheme" class="mb-2" style="font-size: 1.8rem;"></h2>
                     <p style="font-size: 1.1rem; margin-bottom: 5px;">
-                        📅 Tanggal: <span id="talkDateDisplay" class="fw-bold">[Tanggal Akan Diisi JavaScript]</span>
+                        📅 Tanggal: <span id="talkDateDisplay" class="fw-bold"></span>
                     </p>
                     <p style="font-size: 1.1rem; margin-bottom: 15px;">
-                        ⏰ Waktu: <span id="talkTimeDisplay" class="fw-bold">[Waktu Akan Diisi JavaScript]</span>
+                        ⏰ Waktu: <span id="talkTimeDisplay" class="fw-bold"></span>
                     </p>
 
                     <div style="padding: 15px 20px; background-color: #e9f0ff; border-radius: 8px; border: 1px solid #b3ccff;">
@@ -424,15 +414,37 @@
         </div>
     </div>
 
+    <footer>
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <p><strong>Pentol BALL</strong> — Keselamatan Dimulai dari Kesadaran.</p>
+            <p style="font-style: italic; color: #fff; margin: 10px 0;">
+                "Kualitas dan Keselamatan Adalah Rasa Utama Kami."
+            </p>
+            <p>
+                <strong>Alamat:</strong> Jl. Mawar No. 1<br>
+                <strong>Email:</strong> info@pentolBALL.com<br>
+                <strong>Telepon:</strong> +62 812 3456 7890
+            </p>
+            <div style="margin-top: 10px;">
+                <a href="https://www.instagram.com/pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">Instagram</a> |
+                <a href="https://www.facebook.com/pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">Facebook</a> |
+                <a href="https://www.tiktok.com/@pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">TikTok</a>
+            </div>
+            <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
+            <p style="color: #ddd;">© <span id="year"></span> Pentol BALL — Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
     <script>
+        // Set tahun di footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
         // --- FUNGSI UNTUK SAFETY TALK ANNOUNCEMENT ---
 
+        // TANGGAL HARI INI: Rabu, 22 Oktober 2025
         // Definisikan jadwal Safety Talk (Tanggal dan Waktu)
         // Ganti tanggal dan waktu di bawah ini ke jadwal Safety Talk yang Anda inginkan.
-        // Format Target Date: YYYY-MM-DDTHH:MM:SS. 
-        const scheduledDate = "2025-10-24T08:00:00"; // Contoh: Jumat, 24 Oktober 2025, jam 08:00
+        const scheduledDate = "2025-10-24T08:00:00"; // Jumat, 24 Oktober 2025, jam 08:00 WIB
         const scheduleTheme = "Kebakaran & Evakuasi di Area Produksi";
         const scheduleDateDisplay = "Jumat, 24 Oktober 2025";
         const scheduleTimeDisplay = "08:00 - 08:30 WIB";
@@ -452,7 +464,7 @@
 
             if (distance < 0) {
                 // Setelah waktu berakhir
-                countdownElement.innerHTML = "<strong>SEDANG BERLANGSUNG!</strong>";
+                countdownElement.innerHTML = "<span class='text-danger'><strong>SEDANG BERLANGSUNG!</strong></span>";
                 clearInterval(countdownInterval);
                 return;
             }
@@ -462,38 +474,22 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Format output hitungan mundur
-            countdownElement.innerHTML = 
-                `${days} Hari : ${hours.toString().padStart(2, '0')} Jam : ${minutes.toString().padStart(2, '0')} Menit : ${seconds.toString().padStart(2, '0')} Detik`;
+            // Format output hitungan mundur (ditambahkan padding 0 untuk estetika)
+            //countdownElement.innerHTML = 
+                //<span class="text-dark">${days}</span> Hari : <span class="text-dark">${hours.toString().padStart(2, '0')}</span> Jam : <span class="text-dark">${minutes.toString().padStart(2, '0')}</span> Menit : <span class="text-dark">${seconds.toString().padStart(2, '0')}</span> Detik;
+            countdownElement.innerHTML = `
+                <span class="text-dark">${days}</span> Hari : 
+                <span class="text-dark">${hours.toString().padStart(2, '0')}</span> Jam : 
+                <span class="text-dark">${minutes.toString().padStart(2, '0')}</span> Menit : 
+                <span class="text-dark">${seconds.toString().padStart(2, '0')}</span> Detik
+            `;
         }
 
-        // Jalankan hitungan mundur setiap 1 detik
+        // Jalankan hitungan mundur segera dan kemudian setiap 1 detik
         updateCountdown();
         const countdownInterval = setInterval(updateCountdown, 1000);
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Footer -->
-  <footer>
-    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-      <p><strong>Pentol BALL</strong> — Keselamatan Dimulai dari Kesadaran.</p>
-      <p style="font-style: italic; color: #007BFF; margin: 10px 0;">
-        "Kualitas dan Keselamatan Adalah Rasa Utama Kami."
-      </p>
-     <p>
-                <strong>Alamat:</strong> Jl. Mawar No. 1<br>
-                <strong>Email:</strong> info@pentolBALL.com<br>
-                <strong>Telepon:</strong> +62 812 3456 7890
-            </p>
-      <div style="margin-top: 10px;">
-        <a href="https://www.instagram.com/pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">Instagram</a> |
-        <a href="https://www.facebook.com/pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">Facebook</a> |
-        <a href="https://www.tiktok.com/@pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">TikTok</a>
-      </div>
-      <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
-      <p style="color: #ddd;">© <span id="year"></span> Pentol BALL — Semua Hak Dilindungi.</p>
-    </div>
-  </footer>
 
 </body>
 </html>

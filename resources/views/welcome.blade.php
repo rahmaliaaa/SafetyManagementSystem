@@ -506,10 +506,71 @@
     line-height: 1.6;
     font-size: 0.95rem;
   }
+  .learn-more-btn:hover {
+    text-decoration: underline;
+  }
+  .produk-container-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth; /* animasi scroll halus */
+  }
 
+  /* Hilangkan scrollbar di beberapa browser */
+  .produk-container-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
 
+  .produk-container-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 4px;
+  }
+
+  .produk-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 25px 20px;
+    flex: 0 0 280px; /* pastikan card fixed width supaya scroll horizontal */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .produk-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  }
+
+  .produk-card h3 {
+    color: #007BFF;
+    margin-bottom: 10px;
+  }
+
+  .produk-card p {
+    font-size: 0.95rem;
+    color: #555;
+    min-height: 80px;
+  }
+
+  .learn-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #007BFF;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
 
   .learn-more-btn:hover {
+    background: #0056b3;
+    text-decoration: underline;
+  }
+  .learn-more-btn:hover {
+    background: #0056b3;
     text-decoration: underline;
   }
   </style>
@@ -654,6 +715,49 @@
       </div>
     </div>
   </section>
+  <section id="produk" style="background:#fcfcfc; padding:60px 20px;">
+  <h2>Jenis Produk Pentol BALL</h2>
+  <div class="produk-container-scroll">
+    <div class="produk-card">
+      <img src="{{ asset('images/pentol-original.jpg') }}" alt="Pentol Original" style="width:200px; height:100px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
+      <h3>Pentol Original</h3>
+      <p>Pentol tradisional dengan rasa gurih khas, cocok untuk camilan atau lauk tambahan.</p>
+      <a href="{{ url('/produk#pentol-original') }}" class="learn-more-btn">Lihat Detail →</a>
+    </div>
+    <div class="produk-card">
+      <img src="{{ asset('images/pentol-keju.jpg') }}" alt="Pentol Original" style="width:200px; height:100px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
+      <h3>Pentol Keju</h3>
+      <p>Pentol berisi keju leleh, favorit anak-anak dan pecinta keju.</p>
+      <a href="{{ url('/produk#pentol-keju') }}" class="learn-more-btn">Lihat Detail →</a>
+    </div>
+    <div class="produk-card">
+      <img src="{{ asset('images/pentol-pedas.jpg') }}" alt="Pentol Keju" style="width:200px; height:100px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
+      <h3>Pentol Pedas</h3>
+      <p>Pentol dengan bumbu pedas menggigit, cocok untuk yang suka sensasi pedas.</p>
+      <a href="{{ url('/produk#pentol-pedas') }}" class="learn-more-btn">Lihat Detail →</a>
+    </div>
+    <div class="produk-card">
+      <img src="{{ asset('images/pentol-telur.jpg') }}" alt="Pentol Telur" style="width:200px; height:100px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
+      <h3>Pentol Telur</h3>
+      <p>Pentol isi Telur pilihan yang premium, memiliki aroma khas dan tekstur lembut.</p>
+      <a href="{{ url('/produk#pentol-telur') }}" class="learn-more-btn">Lihat Detail →</a>
+    </div>
+    <div class="produk-card">
+      <img src="{{ asset('images/pentol-daging.jpg') }}" alt="Pentol Daging" style="width:200px; height:100px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
+      <h3>Pentol Daging</h3>
+      <p>Pentol dengan isian Daging Cacian, memiliki aroma khas dan tekstur lembut.</p>
+      <a href="{{ url('/produk#pentol-daging') }}" class="learn-more-btn">Lihat Detail →</a>
+    </div>
+    <div class="produk-card">
+      <img src="{{ asset('images/pentol-beranak.jpg') }}" alt="Pentol Beranak" style="width:200px; height:100px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
+      <h3>Pentol Beranak</h3>
+      <p>Pentol Speisal Beranak, memiliki aroma khas dan tekstur lembut.</p>
+      <a href="{{ url('/produk#pentol-cumi') }}" class="learn-more-btn">Lihat Detail →</a>
+    </div>
+    
+    <!-- Tambahkan card lain jika perlu -->
+  </div>
+</section>
   <section id="landasan-hukum-preview">
   <h2>Landasan Hukum K3</h2>
   <p style="max-width: 800px; margin: 0 auto; text-align: left;">

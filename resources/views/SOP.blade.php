@@ -274,6 +274,7 @@
     <nav>
       <a href="{{ url('/') }}">Beranda</a>
       <a href="{{ url('#apd') }}">Alat Pelindung Diri</a>
+      <a href="{{ url('#k3-pabrik') }}">Penerapan K3 di Pabrik</a>
       <a href="{{ url('#evakuasi') }}">Prosedur Evakuasi Darurat</a>
       <a href="{{ url('#monitor') }}">Monitor Mesin Harian</a>
     </nav>
@@ -333,6 +334,32 @@
       ⚠️ Peringatan: Tidak menggunakan APD di zona wajib dapat dikenakan sanksi sesuai prosedur K3 perusahaan.
     </div>
   </section>
+  <section id="k3-pabrik" class="apd-section">
+  <h2>Penerapan K3 di Pabrik Pentol</h2>
+
+  <h3>a.) Keselamatan Kerja</h3>
+  <ul>
+    <li>Penggunaan alat pelindung diri (APD) seperti sarung tangan dan apron.</li>
+    <li>Pelatihan kebersihan pribadi untuk pekerja.</li>
+    <li>Pengolahan makanan sesuai standar higienis.</li>
+    <li>Pemeliharaan alat dan dapur agar tidak terjadi kecelakaan kerja.</li>
+    <li>Pemeriksaan kesehatan berkala bagi karyawan.</li>
+    <li>Pengelolaan limbah dan sanitasi lingkungan yang baik.</li>
+    <li>Mesin giling daging dan peralatan tajam diberi pelindung (safety guard) untuk mencegah kecelakaan.</li>
+    <li>Lantai area produksi dibuat anti-slip untuk mencegah terpeleset karena air atau bahan baku.</li>
+    <li>Disediakan APAR (Alat Pemadam Api Ringan) di beberapa titik area pabrik.</li>
+    <li>Terdapat jalur evakuasi dan papan petunjuk keselamatan di area produksi.</li>
+  </ul>
+
+  <h3>b.) Kesehatan Kerja</h3>
+  <ul>
+    <li>Pekerja diwajibkan menjalani pemeriksaan kesehatan rutin.</li>
+    <li>Disediakan ruang P3K dan kotak obat di area produksi.</li>
+    <li>Pabrik menjaga ventilasi udara dan sirkulasi yang baik untuk mencegah kelembaban berlebih, minimal 10% dari luas lantai (berdasarkan keputusan menteri kesehatan RI No.829/MENKES/SK/VI/1999).</li>
+    <li>Tersedia air bersih dan fasilitas sanitasi yang memadai untuk pekerja.</li>
+  </ul>
+</section>
+
 
     <section id="evakuasi">
   <h2>Prosedur Evakuasi Darurat</h2>
