@@ -36,6 +36,27 @@
       color: #444;
     }
 
+     /* Tombol Kembali */
+    .back-button {
+      text-decoration: none;
+      color: #007BFF !important;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      transition: all 0.2s;
+      white-space: nowrap;
+      margin-right: 10px;
+    }
+
+    .back-button:hover {
+      background-color: #e9ecef;
+      border-color: #ccc;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+
     nav a {
       margin-left: 20px;
       text-decoration: none;
@@ -246,6 +267,7 @@
 
   <header>
     <div style="display:flex; align-items:center;">
+      <a href="/" class="back-button" title="Kembali ke Halaman Utama">&larr; Kembali</a>
       <img src="{{ asset('images/Ball.png') }}" alt="Logo Pentol BALL">
       <strong>Pentol BALL</strong>
     </div>

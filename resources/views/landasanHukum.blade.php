@@ -202,7 +202,7 @@
   <header>
     <div class="brand">
       <a href="/" class="back-button" title="Kembali ke Halaman Utama">&larr; Kembali</a>
-      <img src="logo-placeholder.png" alt="Logo Pentol BALL" onerror="this.style.display='none'">
+       <img src="{{ asset('images/Ball.png') }}" alt="Logo Pentol BALL">
       <div>
         <strong>Pentol BALL</strong>
         <small>Landasan Hukum K3</small>

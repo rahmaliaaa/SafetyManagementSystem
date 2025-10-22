@@ -255,9 +255,8 @@
     <header>
         <div class="brand">
             <a href="/" class="back-button" title="Kembali ke Halaman Utama">
-                &larr; Kembali
-            </a>
-            <img src="logo-placeholder.png" alt="logo" onerror="this.style.display='none'">
+                &larr; Kembali</a>
+             <img src="{{ asset('images/Ball.png') }}" alt="Logo Pentol BALL">
             <div>
                 <div style="font-weight:800">Pentol BALL</div>
                 <div style="font-size:12px;color:#666">Sistem K3 — Layout | Simulasi Kebakaran | Safety Talk</div>
