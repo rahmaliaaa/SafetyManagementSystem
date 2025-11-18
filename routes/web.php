@@ -21,3 +21,8 @@ Route::get('/landasan-hukum', function () {
 Route::get('/sop', function () {
     return view('sop');
 });
+
+Route::get('/struktur-organisasi', function () {
+    return view('strukturOrganisasi');
+});
+

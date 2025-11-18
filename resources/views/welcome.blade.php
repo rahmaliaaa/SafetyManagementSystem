@@ -589,6 +589,7 @@
       <a href="{{ url('/manajemen-risk') }}">Manajemen Risiko</a>
       <a href="{{ url('/sop') }}">SOP</a>
       <a href="{{ url('#statistik-laporan') }}">Statistik</a>
+      <a href="{{ url('/struktur-organisasi') }}">Struktur Organisasi</a>
     </nav>
   </header>
 
