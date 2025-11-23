@@ -212,7 +212,6 @@
       <a href="{{ url('/') }}">Beranda</a>
       <a href="{{ url('/manajemen-risk') }}">Manajemen Risiko</a>
       <a href="{{ url('/penerapan-k3') }}">Penerapan K3</a>
-      <a href="{{ url('/landasan-hukum') }}">Landasan Hukum</a>
     </nav>
   </header>
 
