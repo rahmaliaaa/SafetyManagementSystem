@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Pentol BALL - Sistem K3 (Layout, Simulasi Kebakaran, Safety Talk)</title>
+    <title>Pentol BALL - Sistem K3 (Layout, P3K, Simulasi Kebakaran, Safety Talk)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
@@ -12,6 +12,9 @@
             --card: #fff;
             --muted: #666;
             --success: #2b9348;
+            --info: #17a2b8; /* Warna untuk P3K/informasi */
+            --warning: #ffc107; /* Warna peringatan */
+            --danger: #dc3545; /* Warna bahaya */
         }
 
         body {
@@ -100,7 +103,13 @@
             padding-left: 10px;
             margin-bottom: 12px;
         }
-
+        
+        /* Judul P3K menggunakan warna success (hijau) untuk konsistensi dengan simbol P3K */
+        #p3k .section-title {
+            color: var(--success); 
+            border-left: 5px solid var(--success);
+        }
+        
         .layout-img {
             width: 90%;
             max-width: 700px;
@@ -156,6 +165,122 @@
 
         .text-center {
             text-align: center;
+        }
+
+        /* Styling baru untuk P3K Box */
+        .p3k-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            align-items: stretch;
+        }
+
+        .p3k-image-container {
+            flex: 1 1 300px; /* Fleksibel, minimal 300px */
+            text-align: center;
+            align-self: center;
+        }
+
+        .p3k-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid var(--success);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .p3k-content {
+            flex: 2 1 400px; /* Fleksibel, minimal 400px */
+            background-color: #f7fff9;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #d4edda;
+        }
+
+        .p3k-content h5 {
+            color: var(--success);
+            font-weight: 700;
+            border-bottom: 2px solid #e2f0e4;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .p3k-content ul {
+            list-style: none;
+            padding: 0;
+            columns: 2; /* Bagi daftar menjadi 2 kolom */
+            column-gap: 30px;
+            font-size: 0.95rem;
+        }
+
+        .p3k-content li {
+            padding: 5px 0;
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .p3k-content li::before {
+            content: '🩹'; /* Emoji plester sebagai bullet point */
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-size: 0.9rem;
+            top: 5px;
+        }
+
+        /* Styling Baru untuk Prosedur P3K */
+        .procedure-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-top: 5px solid var(--success); /* Garis atas hijau */
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .procedure-card h5 {
+            color: #222;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .procedure-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .procedure-icon {
+            flex-shrink: 0;
+            font-size: 1.5rem;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--success);
+            border: 2px solid var(--success);
+            border-radius: 50%;
+            font-weight: bold;
+        }
+        
+        .procedure-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .procedure-item p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: #444;
         }
 
         /* MODIFIKASI CSS UNTUK SIMULASI KEBAKARAN (BOX LEBIH BAGUS) */
@@ -249,11 +374,12 @@
             <img src="logo-placeholder.png" alt="logo" onerror="this.style.display='none'">
             <div>
                 <div style="font-weight:800">Pentol BALL</div>
-                <div style="font-size:12px;color:#666">Sistem K3 — Layout | Simulasi Kebakaran | Safety Talk</div>
+                <div style="font-size:12px;color:#666">Sistem K3 — Layout | P3K | Simulasi Kebakaran | Safety Talk</div>
             </div>
         </div>
         <nav>
             <a href="#layout">Layout</a>
+            <a href="#p3k">P3K</a>
             <a href="#simulasi">Simulasi Kebakaran</a>
             <a href="#safetalk">Safety Talk</a>
         </nav>
@@ -261,7 +387,7 @@
 
     <section class="hero">
         <h1>Penerapan Keselamatan dan Kesehatan Kerja (K3)</h1>
-        <p style="max-width:900px;margin:8px auto 0">Menampilkan layout area kerja, prosedur simulasi kebakaran, serta pengumuman Safety Talk mingguan di PT Pentol BALL.</p>
+        <p style="max-width:900px;margin:8px auto 0">Menampilkan layout area kerja, daftar isi P3K, prosedur simulasi kebakaran, serta pengumuman Safety Talk mingguan di PT Pentol BALL.</p>
     </section>
 
     <div class="container">
@@ -271,7 +397,7 @@
             <p>Berikut merupakan layout area kerja yang menunjukkan posisi alat pemadam kebakaran (APAR), jalur evakuasi, titik kumpul, dan area berisiko tinggi.</p>
 
             <div class="text-center">
-                <img src="{{ asset('images/layout-pentol.jpg') }}" alt="Layout Area Kerja K3" class="layout-img mb-3"> 
+                <img src="{{ asset('images/layout-pentol.jpg') }}" alt="Layout Pentol" class="layout-img mb-3">
             </div>
 
             <div class="layout-info shadow-sm">
@@ -286,6 +412,89 @@
             </div>
         </div>
         
+        <div class="card" id="p3k">
+            <h4 class="section-title">Kotak Pertolongan Pertama Pada Kecelakaan (P3K)</h4>
+            <p>Kotak P3K adalah garis pertahanan pertama dalam penanganan cedera ringan di tempat kerja. Pastikan kotak P3K selalu tersedia, mudah diakses, dan isinya lengkap.</p>
+            
+            <div class="p3k-box">
+                <div class="p3k-image-container">
+                    <img src="{{ asset('images/kotak-p3k.png') }}" alt="Kotak P3k" class="layout-img mb-3">
+                    <p class="text-muted mt-2">Lokasi kotak P3K ditandai dengan simbol palang hijau (🟢) pada layout.</p>
+                </div>
+                <div class="p3k-content shadow-sm">
+                    <h5 class="text-center">Isi Standar Kotak P3K PT Pentol BALL</h5>
+                    <ul>
+                        <li>Kasa Steril (berbagai ukuran)</li>
+                        <li>Plester Cepat/Luka (band aid)</li>
+                        <li>Pembalut Gulung (verban)</li>
+                        <li>Kapas dan Tissue Alkohol</li>
+                        <li>Antiseptik (Povidone Iodine/Alkohol)</li>
+                        <li>Gunting dan Pinset</li>
+                        <li>Sarung Tangan Lateks</li>
+                        <li>Masker dan Penutup Mata</li>
+                        <li>Obat Pereda Nyeri (Paracetamol)</li>
+                        <li>Obat Luka Bakar/Bioplacenton</li>
+                        <li>Buku Panduan P3K & Daftar Kontak Darurat</li>
+                        <li>Bidai/Penyangga Segitiga (mitella)</li>
+                    </ul>
+                    <div class="alert alert-warning mt-3 mb-0" role="alert">
+                        ⚠️ Perhatian: Isi kotak P3K harus diperiksa setiap bulan dan segera diisi ulang jika ada yang kedaluwarsa atau habis.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="procedure-card">
+                <h5 class="text-center">Prosedur Dasar Pertolongan Pertama (P3K)</h5>
+                <p class="text-center text-muted mb-4">Langkah-langkah cepat dan tepat untuk menangani kondisi darurat minor di tempat kerja.</p>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="procedure-item">
+                            <div class="procedure-icon">1</div>
+                            <div>
+                                <div class="procedure-title">Penanganan Luka Sayat / Tergores</div>
+                                <p><strong>Hentikan Perdarahan:</strong> Tekan luka dengan kain kasa steril. Setelah darah berhenti, bersihkan area luka dengan air mengalir dan antiseptik. Tutup dengan plester atau perban steril.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="procedure-item">
+                            <div class="procedure-icon">2</div>
+                            <div>
+                                <div class="procedure-title">Penanganan Luka Bakar Ringan (Derajat 1 & 2 Kecil)</div>
+                                <p><strong>Dinginkan:</strong> Segera aliri area luka bakar dengan air dingin (bukan es) selama 10-15 menit untuk meredakan panas. Oleskan obat luka bakar (Bioplacenton/salep khusus). Tutup dengan kasa steril longgar jika ada lepuhan.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="procedure-item">
+                            <div class="procedure-icon">3</div>
+                            <div>
+                                <div class="procedure-title">Penanganan Pingsan (Fainting)</div>
+                                <p>Baringkan korban dengan kaki ditinggikan 30 cm (jika tidak ada cedera kepala). Longgarkan pakaian, pastikan sirkulasi udara baik. Jika tidak sadar lebih dari 1-2 menit, segera panggil bantuan medis darurat.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="procedure-item">
+                            <div class="procedure-icon">4</div>
+                            <div>
+                                <div class="procedure-title">Mata Terkena Bahan Asing/Kimia</div>
+                                <p><strong>Bilas Segera:</strong> Bilas mata dengan air mengalir bersih selama minimal 15-20 menit. Jangan menggosok mata. Setelah dibilas, segera bawa korban ke unit medis/klinik terdekat untuk pemeriksaan lebih lanjut.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-danger mt-3 mb-0 text-center" role="alert">
+                    🚨 Penting! Jika cedera serius (perdarahan hebat, patah tulang, luka bakar luas, atau tidak sadar), jangan ragu. Panggil bantuan medis/ambulans (118/119) dan petugas K3/Koordinator P3K secepatnya.
+                </div>
+
+            </div>
+            </div>
         <div class="card" id="simulasi">
             <h4 class="section-title">Simulasi Kebakaran</h4>
 
@@ -304,7 +513,7 @@
             </div>
 
             <div class="text-center">
-                <img src="{{ asset('images/simulasi-kebakaran.jpg') }}" alt="Simulasi Kebakaran" class="layout-img mb-3">
+                   <img src="{{ asset('images/simulasi-kebakaran.jpg') }}" alt="Simulasi Kebakaran" class="layout-img mb-3">
             </div>
             <p class="mt-4">Kegiatan simulasi kebakaran dilakukan untuk meningkatkan kesiapsiagaan karyawan dalam menghadapi keadaan darurat.
                 Berikut langkah-langkahnya:</p>
@@ -441,12 +650,11 @@
 
         // --- FUNGSI UNTUK SAFETY TALK ANNOUNCEMENT ---
 
-        // TANGGAL HARI INI: Rabu, 22 Oktober 2025
+        // TANGGAL HARI INI: Kamis, 23 Oktober 2025, 12:30 AM WIB
         // Definisikan jadwal Safety Talk (Tanggal dan Waktu)
-        // Ganti tanggal dan waktu di bawah ini ke jadwal Safety Talk yang Anda inginkan.
-        const scheduledDate = "2025-10-24T08:00:00"; // Jumat, 24 Oktober 2025, jam 08:00 WIB
+        const scheduledDate = "2025-12-19T08:00:00"; // Jumat, 19 Desember 2025, jam 08:00 WIB
         const scheduleTheme = "Kebakaran & Evakuasi di Area Produksi";
-        const scheduleDateDisplay = "Jumat, 24 Oktober 2025";
+        const scheduleDateDisplay = "Jumat, 19 Desember 2025";
         const scheduleTimeDisplay = "08:00 - 08:30 WIB";
 
         // Update elemen HTML dengan detail jadwal
@@ -475,8 +683,6 @@
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Format output hitungan mundur (ditambahkan padding 0 untuk estetika)
-            //countdownElement.innerHTML = 
-                //<span class="text-dark">${days}</span> Hari : <span class="text-dark">${hours.toString().padStart(2, '0')}</span> Jam : <span class="text-dark">${minutes.toString().padStart(2, '0')}</span> Menit : <span class="text-dark">${seconds.toString().padStart(2, '0')}</span> Detik;
             countdownElement.innerHTML = `
                 <span class="text-dark">${days}</span> Hari : 
                 <span class="text-dark">${hours.toString().padStart(2, '0')}</span> Jam : 
