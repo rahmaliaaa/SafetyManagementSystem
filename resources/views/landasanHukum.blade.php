@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landasan Hukum - Pentol Sejahtera</title>
+  <title>Landasan Hukum & Kebijakan K3 - Pentol BALL</title>
   <style>
     body {
       margin: 0;
@@ -152,7 +152,7 @@
       margin-bottom: 15px;
     }
 
-     /* Footer */
+    /* Footer */
     footer {
       text-align: center;
       padding: 20px;
@@ -161,7 +161,6 @@
       background: #007BFF;
       color: #ddd;
     }
-
 
     footer .content-info {
       display: flex;
@@ -198,14 +197,14 @@
 </head>
 <body>
 
-  <!-- Header disamakan dengan manajemenrisk -->
+  <!-- Header -->
   <header>
     <div class="brand">
       <a href="/" class="back-button" title="Kembali ke Halaman Utama">&larr; Kembali</a>
-       <img src="{{ asset('images/Ball.png') }}" alt="Logo Pentol BALL">
+      <img src="{{ asset('images/Ball.png') }}" alt="Logo Pentol BALL">
       <div>
         <strong>Pentol BALL</strong>
-        <small>Landasan Hukum K3</small>
+        <small>Landasan Hukum & Kebijakan K3</small>
       </div>
     </div>
     <nav>
@@ -215,6 +214,7 @@
     </nav>
   </header>
 
+  <!-- Section Landasan Hukum (tetap ada) -->
   <section class="hero">
     <h1>Landasan Hukum K3 di Pabrik Pentol</h1>
     <p>Dasar hukum yang menjadi pedoman penerapan Keselamatan dan Kesehatan Kerja (K3)</p>
@@ -246,18 +246,53 @@
     </ul>
   </section>
 
- <!-- Footer -->
+  <!-- Section Kebijakan K3 (baru ditambahkan) -->
+  <section id="kebijakan-k3">
+    <h2>Kebijakan K3 Pabrik Pentol “Ball”</h2>
+    <ul>
+      <li><strong>1. Tujuan</strong><br>
+        Menjamin keselamatan, kesehatan, dan kesejahteraan seluruh pekerja serta menciptakan lingkungan kerja yang aman dan sehat sesuai ketentuan perundang-undangan yang berlaku.</li>
+
+      <li><strong>2. Dasar Hukum</strong><br>
+        <ul>
+          <li>Undang-Undang No. 1 Tahun 1970 tentang Keselamatan Kerja</li>
+          <li>Undang-Undang No. 13 Tahun 2003 tentang Ketenagakerjaan</li>
+          <li>Undang-Undang No. 36 Tahun 2009 tentang Kesehatan</li>
+          <li>Peraturan Pemerintah No. 50 Tahun 2012 tentang Penerapan SMK3</li>
+          <li>Peraturan Menteri Ketenagakerjaan No. 5 Tahun 2018 tentang Keselamatan dan Kesehatan Kerja Lingkungan Kerja</li>
+          <li>Peraturan Menteri Kesehatan No. 1096 Tahun 2011 tentang Higiene Sanitasi Jasa Boga</li>
+          <li>Standar Nasional Indonesia (SNI) tentang Keamanan Pangan dan APD</li>
+        </ul>
+      </li>
+
+      <li><strong>3. Ruang Lingkup</strong><br>
+        Seluruh area kerja Pabrik Pentol “Ball”, termasuk area produksi, gudang, kantor, ruang istirahat, dan kantin pekerja.</li>
+
+      <li><strong>4. Kebijakan Umum K3</strong><br>
+        <ul>
+          <li><strong>Keselamatan Kerja:</strong> Menyediakan APD sesuai kebutuhan, pengaman mesin, dan pelatihan K3 bagi seluruh pekerja.</li>
+          <li><strong>Kesehatan Kerja:</strong> Menjaga lingkungan kerja bersih, pemeriksaan kesehatan rutin, dan pengendalian bahaya fisik, kimia, dan biologis.</li>
+          <li><strong>Sistem Manajemen K3 (SMK3):</strong> Menerapkan SMK3, melakukan audit berkala, dan perbaikan berkelanjutan.</li>
+          <li><strong>Keselamatan Pangan:</strong> Mengikuti SNI Keamanan Pangan, menjaga proses produksi, penyimpanan, dan distribusi sesuai standar sanitasi.</li>
+          <li><strong>Pelaporan dan Penanganan Insiden:</strong> Melaporkan kecelakaan dan kondisi tidak aman, serta menetapkan prosedur tanggap darurat dan evakuasi.</li>
+          <li><strong>Komitmen Perusahaan:</strong> Manajemen mendukung penuh penerapan K3 dan mendorong partisipasi aktif pekerja.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <div style="max-width: 900px; margin: 0 auto; text-align: center;">
       <p><strong>Pentol BALL</strong> — Keselamatan Dimulai dari Kesadaran.</p>
       <p style="font-style: italic; color: #007BFF; margin: 10px 0;">
         "Kualitas dan Keselamatan Adalah Rasa Utama Kami."
       </p>
-     <p>
-                <strong>Alamat:</strong> Jl. Mawar No. 1<br>
-                <strong>Email:</strong> info@pentolBALL.com<br>
-                <strong>Telepon:</strong> +62 812 3456 7890
-            </p>
+      <p>
+        <strong>Alamat:</strong> Jl. Mawar No. 1<br>
+        <strong>Email:</strong> info@pentolBALL.com<br>
+        <strong>Telepon:</strong> +62 812 3456 7890
+      </p>
       <div style="margin-top: 10px;">
         <a href="https://www.instagram.com/pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">Instagram</a> |
         <a href="https://www.facebook.com/pentolball" target="_blank" style="margin: 0 8px; color: #ddd; text-decoration: none;">Facebook</a> |
@@ -267,6 +302,10 @@
       <p style="color: #ddd;">© <span id="year"></span> Pentol BALL — Semua Hak Dilindungi.</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>

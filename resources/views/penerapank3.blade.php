@@ -589,39 +589,174 @@
                 💡 <strong>Tips:</strong> Pastikan semua karyawan mengetahui lokasi APAR, jalur evakuasi, dan titik kumpul.
                 Lakukan pelatihan kebakaran secara rutin minimal dua kali dalam setahun.
             </div>
+
         </div>
 
-        <div class="card" id="safetalk">
-            <h4 class="section-title">Pengumuman Safety Talk Mingguan 📣</h4>
-            <p class="text-muted">Ayo tingkatkan kesadaran K3! Bersiaplah untuk Safety Talk mingguan yang akan datang.</p>
+        <div class="card" id="dokumentasi">
+    <h4 class="section-title">Dokumentasi Kegiatan</h4>
+    <p>Berikut dokumentasi kegiatan pelatihan, simulasi kebakaran, dan safety talk yang telah dilaksanakan.</p>
 
-            <div class="alert alert-info shadow-sm p-4 rounded-4 text-center">
-                <h5 class="fw-bold mb-3" style="color:#007BFF">Safety Talk Berikut: Tingkatkan Kewaspadaan!</h5>
-
-                <div id="safetyTalkSchedule">
-                    <h2 id="talkTheme" class="mb-2" style="font-size: 1.8rem;"></h2>
-                    <p style="font-size: 1.1rem; margin-bottom: 5px;">
-                        📅 Tanggal: <span id="talkDateDisplay" class="fw-bold"></span>
-                    </p>
-                    <p style="font-size: 1.1rem; margin-bottom: 15px;">
-                        ⏰ Waktu: <span id="talkTimeDisplay" class="fw-bold"></span>
-                    </p>
-
-                    <div style="padding: 15px 20px; background-color: #e9f0ff; border-radius: 8px; border: 1px solid #b3ccff;">
-                        <p class="mb-2 fw-bold text-dark">Waktu Tersisa Menuju Safety Talk:</p>
-                        <div id="countdown" class="fw-bolder" style="font-size: 2.5rem; color: #007BFF;">
-                            Memuat...
-                        </div>
-                    </div>
-                    
-                </div>
-                
-                <p class="mt-3 fst-italic text-muted" style="font-size: 0.9rem;">
-                    *Kehadiran wajib bagi seluruh Staf Produksi, Gudang, dan Quality Control.
-                </p>
+    <div class="row g-3">
+    <!-- Dokumentasi 1 -->
+    <div class="col-md-4 col-sm-6">
+        <div class="card shadow-sm h-100">
+            <img src="https://images.pexels.com/photos/4425765/pexels-photo-4425765.jpeg?auto=compress&cs=tinysrgb&h=400" 
+                 class="card-img-top" 
+                 alt="Simulasi Kebakaran"
+                 style="height: 200px; object-fit: cover;">
+            <div class="card-body d-flex flex-column">
+                <h6 class="card-title">Simulasi Kebakaran</h6>
+                <p class="text-muted mb-2">Tanggal: 1 Desember 2025</p>
+                <a href="https://images.pexels.com/photos/4425765/pexels-photo-4425765.jpeg" 
+                   target="_blank" 
+                   class="btn btn-sm btn-primary mt-auto">Lihat / Download</a>
             </div>
         </div>
     </div>
+
+    <!-- Dokumentasi 2 -->
+    <div class="col-md-4 col-sm-6">
+        <div class="card shadow-sm h-100">
+            <img src="https://images.pexels.com/photos/3184295/pexels-photo-3184295.jpeg?auto=compress&cs=tinysrgb&h=400" 
+                 class="card-img-top" 
+                 alt="Safety Talk"
+                 style="height: 200px; object-fit: cover;">
+            <div class="card-body d-flex flex-column">
+                <h6 class="card-title">Safety Talk Mingguan</h6>
+                <p class="text-muted mb-2">Tanggal: 5 Desember 2025</p>
+                <a href="https://images.pexels.com/photos/3184295/pexels-photo-3184295.jpeg" 
+                   target="_blank" 
+                   class="btn btn-sm btn-primary mt-auto">Lihat / Download</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dokumentasi 3 -->
+    <div class="col-md-4 col-sm-6">
+        <div class="card shadow-sm h-100">
+            <img src="https://blog.axcethr.com/hubfs/fire-drill-at-work-_1200-%C3%97-628-px__1%20%281%29.webp" 
+                 class="card-img-top" 
+                 alt="Simulasi Evakuasi Karyawan"
+                 style="height: 200px; object-fit: cover;">
+            <div class="card-body d-flex flex-column">
+                <h6 class="card-title">Simulasi Evakuasi Karyawan</h6>
+                <p class="text-muted mb-2">Tanggal: 10 Desember 2025</p>
+                <a href="https://blog.axcethr.com/hubfs/fire-drill-at-work-_1200-%C3%97-628-px__1%20%281%29.webp" 
+                   target="_blank" 
+                   class="btn btn-sm btn-primary mt-auto">Lihat / Download</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+       <div class="card" id="safetalk">
+    <h4 class="section-title">Pengumuman Safety Talk Mingguan 📣</h4>
+    <p class="text-muted">Ayo tingkatkan kesadaran K3! Bersiaplah untuk Safety Talk mingguan yang akan datang.</p>
+
+    <div class="alert alert-info shadow-sm p-4 rounded-4 text-center">
+        <h5 class="fw-bold mb-3" style="color:#007BFF">Safety Talk Berikut: Tingkatkan Kewaspadaan!</h5>
+
+        <div id="safetyTalkSchedule">
+            <h2 id="talkTheme" class="mb-2" style="font-size: 1.8rem;">Pengenalan K3 dan Evakuasi</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 5px;">
+                📅 Tanggal: <span id="talkDateDisplay" class="fw-bold">20 Desember 2025</span>
+            </p>
+            <p style="font-size: 1.1rem; margin-bottom: 15px;">
+                ⏰ Waktu: <span id="talkTimeDisplay" class="fw-bold">10:00 – 10:30 WIB</span>
+            </p>
+
+            <div style="padding: 15px 20px; background-color: #e9f0ff; border-radius: 8px; border: 1px solid #b3ccff;">
+                <p class="mb-2 fw-bold text-dark">Waktu Tersisa Menuju Safety Talk:</p>
+                <div id="countdown" class="fw-bolder" style="font-size: 2.5rem; color: #007BFF;">
+                    Memuat...
+                </div>
+
+                <h1>Safety Talk</h1>
+                <p>Ini halaman Safety Talk.</p>
+
+                <hr>
+
+                <h3>File Undangan</h3>
+                <a href="{{ route('undangan.list') }}" class="btn btn-primary mb-3">Lihat Daftar Undangan</a>
+
+                <!-- Tombol untuk tampilkan notulensi popup -->
+                <button type="button" class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#notulensiModal">
+                    📄 Download Notulensi PDF
+                </button>
+            </div>
+        </div>
+        <p class="mt-3 fst-italic text-muted" style="font-size: 0.9rem;">
+            *Kehadiran wajib bagi seluruh Staf Produksi, Gudang, dan Quality Control.
+        </p>
+    </div>
+</div>
+
+<!-- Modal Notulensi -->
+<div class="modal fade" id="notulensiModal" tabindex="-1" aria-labelledby="notulensiModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="notulensiModalLabel">Notulensi Safety Talk 📋</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="notulensiPDF">
+        <p><strong>Tanggal:</strong> 20 Desember 2025 | <strong>Waktu:</strong> 10:00 – 10:30 WIB | <strong>Tempat:</strong> Area Kantor & Lantai Produksi</p>
+
+        <h5>Peserta</h5>
+        <ul>
+            <li>Staf Produksi</li>
+            <li>Staf Gudang</li>
+            <li>Staf Quality Control</li>
+        </ul>
+
+        <h5>Materi</h5>
+        <ol>
+            <li>Pengenalan Potensi Bahaya Kebakaran di Area Produksi</li>
+            <li>Prosedur Evakuasi & Safety Drill</li>
+            <li>Penggunaan APAR (Alat Pemadam Api Ringan)</li>
+            <li>Koordinasi Tim Darurat Internal</li>
+        </ol>
+
+        <h5>Diskusi / Tanya Jawab</h5>
+        <ul>
+            <li>Peserta menanyakan jalur evakuasi di gudang bahan mudah terbakar</li>
+            <li>Dijelaskan prosedur evakuasi dan penggunaan APAR</li>
+        </ul>
+
+        <h5>Kesimpulan / Rekomendasi</h5>
+        <ul>
+            <li>Peserta memahami jalur evakuasi dan prosedur pemadaman api</li>
+            <li>Latihan rutin minimal 2 kali setahun</li>
+            <li>Pemeriksaan APAR dan titik kumpul secara berkala</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button id="downloadPDF" class="btn btn-success">Download PDF</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jsPDF CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+document.getElementById("downloadPDF").addEventListener("click", () => {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    const content = document.getElementById("notulensiPDF").innerText;
+
+    doc.setFontSize(12);
+    doc.text(content, 10, 10, { maxWidth: 190 });
+    doc.save("Notulensi_Safety_Talk.pdf");
+});
+</script>
+
+    <!-- Tambahkan tombol download di atas atau bawah notulensi -->
+<button id="downloadPDF" class="btn btn-success mb-3">
+
+
 
     <footer>
         <div style="max-width: 900px; margin: 0 auto; text-align: center;">
@@ -656,7 +791,7 @@
         const scheduleTheme = "Kebakaran & Evakuasi di Area Produksi";
         const scheduleDateDisplay = "Jumat, 19 Desember 2025";
         const scheduleTimeDisplay = "08:00 - 08:30 WIB";
-
+generate
         // Update elemen HTML dengan detail jadwal
         document.getElementById('talkTheme').textContent = scheduleTheme;
         document.getElementById('talkDateDisplay').textContent = scheduleDateDisplay;
