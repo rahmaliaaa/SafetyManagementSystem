@@ -432,6 +432,87 @@
   </section>
   </section>
 
+
+  <section id="traceability" class="apd-section">
+  <h2>Penelusuran Produk Terjual (Traceability)</h2>
+  <p class="subtitle">
+    Prosedur ini digunakan untuk melacak produk yang telah terjual apabila ditemukan potensi masalah K3 dalam penggunaan produk oleh konsumen.
+    Sistem traceability memastikan setiap batch produksi dapat diidentifikasi dengan cepat dan akurat.
+  </p>
+
+  <div class="apd-item" style="margin-bottom: 20px;">
+    <h3>Tujuan Prosedur</h3>
+    <p>
+      Menjamin kemampuan perusahaan dalam melacak asal-usul produk, distribusi, dan melakukan tindakan korektif termasuk penarikan produk (recall) apabila diperlukan.
+    </p>
+  </div>
+
+  <div class="apd-item">
+    <h3>Alur Penelusuran Produk</h3>
+    <ol style="margin-left: 20px; line-height: 1.5;">
+      <li><strong>Identifikasi Awal Masalah:</strong> Tim K3 menerima laporan adanya potensi bahaya terkait produk yang telah beredar.</li>
+      <li><strong>Penelusuran Nomor Batch:</strong> Operator membuka <em>Batch Record Log</em> untuk melihat data produksi, tanggal pembuatan, dan bahan baku yang digunakan.</li>
+      <li><strong>Pengecekan Distribusi:</strong> Alur distribusi dicari melalui dokumen <em>Product Distribution Register</em> untuk mengetahui lokasi pengiriman produk.</li>
+      <li><strong>Evaluasi Risiko K3:</strong> Tim K3 menilai tingkat bahaya dan memutuskan apakah perlu dilakukan penarikan produk.</li>
+      <li><strong>Tindakan Korektif:</strong> Menghubungi pelanggan terkait, menarik produk, serta melakukan investigasi lanjutan.</li>
+      <li><strong>Pendokumentasian:</strong> Seluruh proses dicatat dalam <em>Traceability Action Form</em>.</li>
+    </ol>
+  </div>
+
+  <div class="highlight-box">
+    📦 <strong>Catatan:</strong> Semua dokumen pendukung traceability disimpan dalam sistem dokumentasi digital perusahaan dan diperbarui secara berkala.
+  </div>
+
+  <h3 style="margin-top: 30px;">Dokumen Pendukung Traceability</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nama Dokumen</th>
+        <th>Kode</th>
+        <th>Deskripsi</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>SOP Penelusuran Produk</td>
+        <td>SOP-TRC-01</td>
+        <td>Prosedur pelacakan produk terjual ketika ada potensi masalah K3.</td>
+        <td>Tersedia</td>
+      </tr>
+      <tr>
+        <td>Batch Record Log</td>
+        <td>FR-TRC-02</td>
+        <td>Pencatatan nomor batch, tanggal produksi, operator, dan bahan baku.</td>
+        <td>Tersedia</td>
+      </tr>
+      <tr>
+        <td>Product Distribution Register</td>
+        <td>FR-TRC-03</td>
+        <td>Catatan distribusi produk ke konsumen atau outlet.</td>
+        <td>Tersedia</td>
+      </tr>
+      <tr>
+        <td>Prosedur Penarikan Produk</td>
+        <td>SOP-TRC-04</td>
+        <td>Langkah-langkah penarikan produk jika ditemukan masalah keamanan.</td>
+        <td>Tersedia</td>
+      </tr>
+      <tr>
+        <td>Traceability Action Form</td>
+        <td>FR-TRC-05</td>
+        <td>Form pendokumentasian proses penelusuran dan tindakan korektif.</td>
+        <td>Tersedia</td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>
+
+  
+
+
   <!-- Footer -->
   <footer>
     <div style="max-width: 900px; margin: 0 auto; text-align: center;">
@@ -452,6 +533,8 @@
       <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
       <p style="color: #ddd;">© <span id="year"></span> Pentol BALL — Semua Hak Dilindungi.</p>
     </div>
+
+    
   </footer>
 
   <script>

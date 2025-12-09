@@ -284,6 +284,35 @@
     </ul>
   </section>
 
+  <section id="investigasi-kecelakaan" class="apd-section">
+  <h2>Pemeriksaan dan Pengkajian Kecelakaan Kerja</h2>
+  <p class="subtitle">
+    Prosedur ini digunakan untuk melakukan pemeriksaan dan analisis kecelakaan kerja serta penyakit akibat kerja agar tindakan perbaikan dapat dilakukan.
+  </p>
+
+  <!-- Gambar Dummy -->
+  <p style="text-align:center; font-style:italic; margin-bottom:20px;">
+    (Gambar Proses Investigasi Kecelakaan / Accident Investigation Flowchart)
+  </p>
+
+  <p>
+    Perusahaan memiliki prosedur pemeriksaan dan pengkajian kecelakaan yang dilakukan oleh petugas atau Ahli K3 yang berkompeten. 
+    Pemeriksaan dilakukan untuk mengidentifikasi sebab langsung maupun sebab tidak langsung dari kecelakaan, serta menentukan langkah-langkah perbaikan yang harus dilakukan.
+    Laporan pemeriksaan berisi rekomendasi dan jadwal pelaksanaan perbaikan. 
+    Setiap tindakan perbaikan diinformasikan kepada tenaga kerja yang terlibat dan didokumentasikan dalam laporan evaluasi kecelakaan.
+  </p>
+
+  <ul style="margin-top: 20px; line-height: 1.6;">
+    <li><strong>Pemeriksaan Kecelakaan:</strong> dilakukan segera setelah kejadian oleh petugas yang berwenang.</li>
+    <li><strong>Penyusunan Laporan:</strong> berisi analisis penyebab, rekomendasi, dan waktu perbaikan.</li>
+    <li><strong>Tanggung Jawab Perbaikan:</strong> ditetapkan kepada petugas/unit terkait.</li>
+    <li><strong>Informasi kepada Pekerja:</strong> seluruh tindakan perbaikan disosialisasikan kepada pekerja.</li>
+    <li><strong>Dokumentasi:</strong> seluruh proses dan tindak lanjut dicatat dalam laporan pemeriksaan kecelakaan.</li>
+  </ul>
+
+</section>
+
+
   <!-- Footer -->
   <footer>
     <div style="max-width: 900px; margin: 0 auto; text-align: center;">
