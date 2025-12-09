@@ -588,6 +588,7 @@
       <a href="{{ url('/penerapan-k3') }}">Penerapan K3</a>
       <a href="{{ url('/manajemen-risk') }}">Manajemen Risiko</a>
       <a href="{{ url('/sop') }}">SOP</a>
+      <a href="{{ url('/k3-document-management') }}">Pengendalian Dokumen</a>
       <a href="{{ url('#statistik-laporan') }}">Statistik</a>
       <a href="{{ url('/struktur-organisasi') }}">Struktur Organisasi</a>
     </nav>
