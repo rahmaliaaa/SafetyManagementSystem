@@ -850,6 +850,91 @@
   </div>
 </section>
 
+<section id="absensi-fingerprint" style="background:#f7f7f7; padding:60px 20px; text-align:center;">
+  <h2>Absensi K3 dengan Sidik Jari</h2>
+  <p>Silakan sentuhkan jari Anda ke scanner (simulasi)</p>
+
+  <!-- Mockup Fingerprint Scanner -->
+ <div id="fingerprint-scan" 
+     style="width:200px; height:200px; margin:20px auto; 
+            background:#fff; border-radius:50%; border:4px dashed #007BFF; 
+            display:flex; align-items:center; justify-content:center; 
+            cursor:pointer; user-select:none; font-size:60px; transition:0.2s;">
+  🖐️
+</div>
+
+<script>
+const fingerprintScan = document.getElementById('fingerprint-scan');
+fingerprintScan.addEventListener('click', () => {
+    fingerprintScan.style.transform = "scale(0.95)";
+    setTimeout(() => fingerprintScan.style.transform = "scale(1)", 100);
+    alert("Scanner disentuh! Data absensi siap ditambahkan.");
+});
+</script>
+
+
+  <h3>Rekap Absensi Hari Ini</h3>
+  <table style="width:100%; max-width:800px; margin:20px auto; border-collapse:collapse;">
+    <thead>
+      <tr style="background:#007BFF; color:white;">
+        <th style="padding:8px; border:1px solid #ddd;">No</th>
+        <th style="padding:8px; border:1px solid #ddd;">Nama Karyawan</th>
+        <th style="padding:8px; border:1px solid #ddd;">Departemen</th>
+        <th style="padding:8px; border:1px solid #ddd;">Jam Masuk</th>
+        <th style="padding:8px; border:1px solid #ddd;">Jam Keluar</th>
+        <th style="padding:8px; border:1px solid #ddd;">Status</th>
+      </tr>
+    </thead>
+    <tbody id="absensi-body">
+      <!-- Data akan muncul otomatis -->
+    </tbody>
+  </table>
+</section>
+
+<script>
+  // Data karyawan
+  const karyawan = [
+    {nama:"Alya Ajeng Ayu", departemen:"Departemen Perencanaan & Produksi Aman"},
+    {nama:"Belqis Ivana", departemen:"Departemen Pelaksanaan K3 di Produksi"},
+    {nama:"Lyra Faiqah", departemen:"Departemen Pengecekan & Pengawasan K3"},
+    {nama:"Rahmalia Mutia", departemen:"Departemen Audit & Laporan Insiden"}
+  ];
+
+  const absensiBody = document.getElementById('absensi-body');
+  let counter = 0;
+
+  // Fungsi simulasi absensi otomatis
+  document.getElementById('fingerprint-scan').addEventListener('click', () => {
+    if(counter >= karyawan.length) {
+      alert("Semua karyawan sudah absen hari ini!");
+      return;
+    }
+
+    const now = new Date();
+    const jamMasuk = now.toLocaleTimeString('id-ID', {hour:'2-digit', minute:'2-digit'});
+    const jamKeluar = ''; // Belum pulang
+    const status = 'Hadir';
+
+    const k = karyawan[counter];
+
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td style="padding:8px; border:1px solid #ddd;">${counter+1}</td>
+      <td style="padding:8px; border:1px solid #ddd;">${k.nama}</td>
+      <td style="padding:8px; border:1px solid #ddd;">${k.departemen}</td>
+      <td style="padding:8px; border:1px solid #ddd;">${jamMasuk}</td>
+      <td style="padding:8px; border:1px solid #ddd;">${jamKeluar}</td>
+      <td style="padding:8px; border:1px solid #ddd;">${status}</td>
+    `;
+    absensiBody.appendChild(row);
+
+    counter++;
+  });
+</script>
+
+
+
+
 
   <!-- Footer -->
   <footer>
