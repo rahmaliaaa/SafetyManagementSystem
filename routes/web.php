@@ -26,3 +26,6 @@ Route::get('/struktur-organisasi', function () {
     return view('strukturOrganisasi');
 });
 
+Route::get('/k3-document-management', function () {
+    return view('k3_document_management'); 
+});
