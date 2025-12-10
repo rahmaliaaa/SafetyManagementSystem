@@ -759,6 +759,12 @@
     <p class="text-muted mt-2 fst-italic">
         Catatan ini diperbarui setiap ada temuan baru dari pengawas K3 di lapangan.
     </p>
+    <a href="{{ asset('lampiran hasil Audit K3 Kelompok 6 2025 SIB 3B.pdf') }}"
+        class="btn btn-primary btn-lg shadow-sm"
+        style="border-radius: 8px;"
+        target="_blank">
+        📄 Laporan Hasil Audit K3
+    </a>
 </div>
 
 <!-- Modal Notulensi -->
@@ -899,4 +905,5 @@ document.getElementById("downloadPDF").addEventListener("click", () => {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

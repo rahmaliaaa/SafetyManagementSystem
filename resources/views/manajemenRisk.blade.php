@@ -290,11 +290,57 @@
     Prosedur ini digunakan untuk melakukan pemeriksaan dan analisis kecelakaan kerja serta penyakit akibat kerja agar tindakan perbaikan dapat dilakukan.
   </p>
 
-  <!-- Gambar Dummy -->
-  <p style="text-align:center; font-style:italic; margin-bottom:20px;">
-    (Gambar Proses Investigasi Kecelakaan / Accident Investigation Flowchart)
-  </p>
+  <!-- 4 Foto Dummy dengan Penjelasan -->
+  <div style="
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+      gap: 20px; 
+      margin: 20px 0;
+  ">
 
+    <!-- Foto 1 -->
+    <div style="text-align: center;">
+      <img src="{{ asset('images/investigasi1.png') }}" 
+           alt="Petugas K3 Melakukan Pemeriksaan Lokasi" 
+           style="width: 100%; border-radius: 10px;">
+      <p style="margin-top: 10px; font-size: 14px;">
+        Petugas K3 melakukan inspeksi awal dan mendokumentasikan lokasi kejadian.
+      </p>
+    </div>
+
+    <!-- Foto 2 -->
+    <div style="text-align: center;">
+      <img src="{{ asset('images/investigasi2.png') }}" 
+           alt="Pengambilan Foto Bukti Kecelakaan" 
+           style="width: 100%; border-radius: 10px;">
+      <p style="margin-top: 10px; font-size: 14px;">
+        Bukti fisik seperti kondisi lantai, peralatan, atau mesin difoto dari berbagai sudut.
+      </p>
+    </div>
+
+    <!-- Foto 3 -->
+    <div style="text-align: center;">
+      <img src="{{ asset('images/investigasi3.png') }}" 
+           alt="Pencatatan Informasi di Laporan" 
+           style="width: 100%; border-radius: 10px;">
+      <p style="margin-top: 10px; font-size: 14px;">
+        Petugas menyusun laporan analisis penyebab kecelakaan dan rekomendasi perbaikan.
+      </p>
+    </div>
+
+    <!-- Foto 4 -->
+    <div style="text-align: center;">
+      <img src="{{ asset('images/investigasi4.png') }}" 
+           alt="Tindakan Perbaikan dan Pemantauan" 
+           style="width: 100%; border-radius: 10px;">
+      <p style="margin-top: 10px; font-size: 14px;">
+        Unit terkait melaksanakan tindakan perbaikan dan prosesnya didokumentasikan.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Paragraf Penjelasan -->
   <p>
     Perusahaan memiliki prosedur pemeriksaan dan pengkajian kecelakaan yang dilakukan oleh petugas atau Ahli K3 yang berkompeten. 
     Pemeriksaan dilakukan untuk mengidentifikasi sebab langsung maupun sebab tidak langsung dari kecelakaan, serta menentukan langkah-langkah perbaikan yang harus dilakukan.
@@ -311,6 +357,7 @@
   </ul>
 
 </section>
+
 
 
   <!-- Footer -->

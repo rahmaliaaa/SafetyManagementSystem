@@ -1001,6 +1001,405 @@
     </div>
   </div>
 </section>
+<!-- BUTTON RENCANA TAHUNAN -->
+  <section id="rencana-tahunan-section" style="background:#fff; padding:60px 20px; text-align:center;">
+    <h2 style="color:#007BFF; margin-bottom:20px;">📅 Rencana Tahunan K3 2025</h2>
+    <p style="color:#666; margin-bottom:30px;">Lihat jadwal lengkap program K3 sepanjang tahun</p>
+    
+    <button id="btn-rencana-tahunan" style="background:linear-gradient(135deg, #007BFF, #0056b3); color:white; padding:15px 40px; border:none; border-radius:50px; font-size:1.1rem; font-weight:bold; cursor:pointer; box-shadow:0 4px 15px rgba(0,123,255,0.3); transition:all 0.3s; display:inline-flex; align-items:center; gap:10px;">
+      <span style="font-size:1.5rem;">📋</span>
+      Lihat Rencana Tahunan
+    </button>
+  </section>
+
+  <!-- MODAL POP-UP RENCANA TAHUNAN -->
+  <div id="modal-rencana" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; overflow-y:auto; padding:20px;">
+    <div style="max-width:1200px; margin:50px auto; background:#fff; border-radius:20px; box-shadow:0 10px 50px rgba(0,0,0,0.3); position:relative; animation:slideDown 0.4s ease;">
+      
+      <!-- Header Modal -->
+      <div style="background:linear-gradient(135deg, #007BFF, #0056b3); color:white; padding:25px 30px; border-radius:20px 20px 0 0; display:flex; justify-content:space-between; align-items:center;">
+        <h2 style="margin:0; color:white; border:none; padding:0;">📅 Rencana Tahunan K3 2025</h2>
+        <button id="close-modal" style="background:rgba(255,255,255,0.2); border:none; color:white; font-size:2rem; cursor:pointer; width:40px; height:40px; border-radius:50%; transition:background 0.3s; display:flex; align-items:center; justify-content:center;">×</button>
+      </div>
+
+      <!-- Content Modal -->
+      <div style="padding:30px; max-height:70vh; overflow-y:auto;">
+        
+        <!-- Progress Overview di Atas -->
+        <div style="background:linear-gradient(135deg, #f8f9fa, #e9ecef); padding:25px; border-radius:12px; text-align:center; margin-bottom:30px; border:2px solid #007BFF;">
+          <h3 style="color:#333; margin-bottom:20px;">Progress Keseluruhan 2025</h3>
+          <div style="background:#e0e0e0; height:35px; border-radius:20px; overflow:hidden; margin-bottom:15px; position:relative;">
+            <div id="progress-bar" style="background:linear-gradient(90deg, #28a745, #20c997); height:100%; width:17%; transition:width 0.8s ease; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:16px; position:relative;">
+              <span id="progress-text">17%</span>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-around; flex-wrap:wrap; gap:20px; margin-top:25px;">
+            <div style="text-align:center; padding:15px; background:white; border-radius:10px; min-width:120px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+              <div style="font-size:2.5rem; color:#28a745;" id="count-selesai">11</div>
+              <div style="color:#666; font-size:0.9rem; font-weight:600;">Selesai</div>
+            </div>
+            <div style="text-align:center; padding:15px; background:white; border-radius:10px; min-width:120px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+              <div style="font-size:2.5rem; color:#ffc107;" id="count-terjadwal">1</div>
+              <div style="color:#666; font-size:0.9rem; font-weight:600;">Terjadwal</div>
+            </div>
+            <div style="text-align:center; padding:15px; background:white; border-radius:10px; min-width:120px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+              <div style="font-size:2.5rem; color:#6c757d;" id="count-belum">0</div>
+              <div style="color:#666; font-size:0.9rem; font-weight:600;">Belum Mulai</div>
+            </div>
+          </div>
+        </div>
+    
+        
+    <div style="max-width:1200px; margin:0 auto;">
+      <!-- Timeline Visual -->
+      <div class="timeline-container" style="position:relative; padding:20px 0;">
+        
+        <!-- Q1 -->
+        <div class="quarter-section" style="margin-bottom:30px; padding:25px; background:#f8f9fa; border-radius:12px; border-left:5px solid #007BFF;">
+          <h3 style="color:#007BFF; margin-bottom:15px;">🔹 Kuartal 1 (Januari - Maret)</h3>
+          <ul style="list-style:none; padding:0;">
+            <li class="kegiatan-item" data-status="selesai" style="padding:10px 0; border-bottom:1px solid #e0e0e0; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong>Januari:</strong> Audit K3 Tahunan & Evaluasi Risiko
+              </div>
+              <button class="btn-toggle-status" style="background:#28a745; color:white; border:none; padding:5px 15px; border-radius:20px; cursor:pointer; font-weight:bold; font-size:0.85rem;">✓ Selesai</button>
+            </li>
+            <li class="kegiatan-item" data-status="selesai" style="padding:10px 0; border-bottom:1px solid #e0e0e0; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong>Februari:</strong> Pelatihan APD & Hygiene Produksi
+              </div>
+              <button class="btn-toggle-status" style="background:#28a745; color:white; border:none; padding:5px 15px; border-radius:20px; cursor:pointer; font-weight:bold; font-size:0.85rem;">✓ Selesai</button>
+            </li>
+            <li class="kegiatan-item" data-status="selesai" style="padding:10px 0; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong>Maret:</strong> Simulasi Kebakaran & Evakuasi Darurat
+              </div>
+              <button class="btn-toggle-status" style="background:#28a745; color:white; border:none; padding:5px 15px; border-radius:20px; cursor:pointer; font-weight:bold; font-size:0.85rem;">✓ Selesai</button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Q2 -->
+        <div class="quarter-section" style="margin-bottom:30px; padding:25px; background:#fff7e6; border-radius:12px; border-left:5px solid #ffc107;">
+          <h3 style="color:#ffc107; margin-bottom:15px;">🔸 Kuartal 2 (April - Juni)</h3>
+          <ul style="list-style:none; padding:0;">
+            <li class="kegiatan-item" data-status="selesai" style="padding:10px 0; border-bottom:1px solid #e0e0e0; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong>April:</strong> Pemeriksaan Kesehatan Berkala Karyawan
+              </div>
+              <button class="btn-toggle-status" style="background:#28a745; color:white; border:none; padding:5px 15px; border-radius:20px; cursor:pointer; font-weight:bold; font-size:0.85rem;">✓ Selesai</button>
+            </li>
+            <li class="kegiatan-item" data-status="selesai" style="padding:10px 0; border-bottom:1px solid #e0e0e0; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong>Mei:</strong> Workshop Ergonomi & Pencegahan Cedera
+              </div>
+              <button class="btn-toggle-status" style="background:#28a745; color:white; border:none; padding:5px 15px; border-radius:20px; cursor:pointer; font-weight:bold; font-size:0.85rem;">✓ Selesai</button>
+            </li>
+            <li class="kegiatan-item" data-status="selesai" style="padding:10px 0; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong>Juni:</strong> Review & Update SOP K3
+              </div>
+              <button class="btn-toggle-status" style="background:#28a745; color:white; border:none; padding:5px 15px; border-radius:20px; cursor:pointer; font-weight:bold; font-size:0.85rem;">✓ Selesai</button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Q3 -->
+        <div class="quarter-section" style="margin-bottom:30px; padding:25px; background:#e8f5e9; border-radius:12px; border-left:5px solid #28a745;">
+          <h3 style="color:#28a745; margin-bottom:15px;">🔹 Kuartal 3 (Juli - September)</h3>
+          <ul style="list-style:none; padding:0;">
+            <li class="kegiatan-item" data-status="selesai" style="padding:10px 0; border-bottom:1px solid #e0e0e0; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong>Juli:</strong> Pelatihan P3K & Penanganan Kecelakaan Kerja
+              </div>
+              <button class="btn-toggle-status" style="background:#28a745; color:white; border:none; padding:5px 15px; border-radius:20px; cursor:pointer; font-weight:bold; font-size:0.85rem;">✓ Selesai</button>
+            </li>
+            <li class="kegiatan-item" data-status="selesai" style="padding:10px 0; border-bottom:1px solid #e0e0e0; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong>Agustus:</strong> Pemeliharaan & Kalibrasi Alat Produksi
+              </div>
+              <button class="btn-toggle-status" style="background:#28a745; color:white; border:none; padding:5px 15px; border-radius:20px; cursor:pointer; font-weight:bold; font-size:0.85rem;">✓ Selesai</button>
+            </li>
+            <li class="kegiatan-item" data-status="selesai" style="padding:10px 0; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong>September:</strong> Safety Competition & Reward Program
+              </div>
+              <button class="btn-toggle-status" style="background:#28a745; color:white; border:none; padding:5px 15px; border-radius:20px; cursor:pointer; font-weight:bold; font-size:0.85rem;">✓ Selesai</button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Q4 -->
+        <div class="quarter-section" style="margin-bottom:30px; padding:25px; background:#fff0f0; border-radius:12px; border-left:5px solid #dc3545;">
+          <h3 style="color:#dc3545; margin-bottom:15px;">🔸 Kuartal 4 (Oktober - Desember)</h3>
+          <ul style="list-style:none; padding:0;">
+            <li class="kegiatan-item" data-status="selesai" style="padding:10px 0; border-bottom:1px solid #e0e0e0; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong>Oktober:</strong> Audit Internal SMK3
+              </div>
+              <button class="btn-toggle-status" style="background:#28a745; color:white; border:none; padding:5px 15px; border-radius:20px; cursor:pointer; font-weight:bold; font-size:0.85rem;">✓ Selesai</button>
+            </li>
+            <li class="kegiatan-item" data-status="selesai" style="padding:10px 0; border-bottom:1px solid #e0e0e0; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong>November:</strong> Pelatihan Penggunaan APAR & Hydrant
+              </div>
+              <button class="btn-toggle-status" style="background:#28a745; color:white; border:none; padding:5px 15px; border-radius:20px; cursor:pointer; font-weight:bold; font-size:0.85rem;">✓ Selesai</button>
+            </li>
+            <li class="kegiatan-item" data-status="terjadwal" style="padding:10px 0; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <strong>Desember:</strong> Evaluasi Program K3 Tahunan & Perencanaan 2026
+              </div>
+              <button class="btn-toggle-status" style="background:#ffc107; color:white; border:none; padding:5px 15px; border-radius:20px; cursor:pointer; font-weight:bold; font-size:0.85rem;">⏳ Terjadwal</button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Program Rutin Bulanan -->
+        <div style="background:#fff; padding:30px; border-radius:12px; margin-top:30px; border:2px solid #007BFF;">
+          <h3 style="color:#007BFF; margin-bottom:20px; text-align:center;">📌 Program Rutin Bulanan</h3>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px;">
+            <div style="padding:15px; background:#f8f9fa; border-radius:8px;">
+              <strong style="color:#007BFF;">🗣️ Safety Talk Mingguan</strong>
+              <p style="margin:8px 0 0; font-size:0.9rem; color:#666;">Setiap Senin pagi, 15 menit</p>
+            </div>
+            <div style="padding:15px; background:#f8f9fa; border-radius:8px;">
+              <strong style="color:#007BFF;">🔍 Inspeksi Harian</strong>
+              <p style="margin:8px 0 0; font-size:0.9rem; color:#666;">Checklist peralatan & area kerja</p>
+            </div>
+            <div style="padding:15px; background:#f8f9fa; border-radius:8px;">
+              <strong style="color:#007BFF;">📋 Rapat K3 Bulanan</strong>
+              <p style="margin:8px 0 0; font-size:0.9rem; color:#666;">Minggu pertama setiap bulan</p>
+            </div>
+            <div style="padding:15px; background:#f8f9fa; border-radius:8px;">
+              <strong style="color:#007BFF;">🏥 Health Check Point</strong>
+              <p style="margin:8px 0 0; font-size:0.9rem; color:#666;">Monitoring suhu & kesehatan harian</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <!-- Footer Modal dengan Action Buttons -->
+    <div style="background:#f8f9fa; padding:20px 30px; border-radius:0 0 20px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px; border-top:2px solid #e0e0e0;">
+      <button id="btn-reset-progress" style="background:#dc3545; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; font-weight:600; transition:background 0.3s;">
+        🔄 Reset Progress
+      </button>
+      <div style="display:flex; gap:10px;">
+        <button id="btn-print-rencana" style="background:#007BFF; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; font-weight:600; transition:background 0.3s;">
+          🖨️ Cetak
+        </button>
+        <button id="btn-close-modal" style="background:#6c757d; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; font-weight:600; transition:background 0.3s;">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NOTIFIKASI 90% -->
+<div id="notif-90" style="display:none; position:fixed; top:20px; right:20px; background:linear-gradient(135deg, #28a745, #20c997); color:white; padding:20px 30px; border-radius:15px; box-shadow:0 8px 25px rgba(40,167,69,0.4); z-index:10000; animation:slideInRight 0.5s ease; max-width:400px;">
+  <div style="display:flex; align-items:center; gap:15px;">
+    <span style="font-size:2.5rem;">🎉</span>
+    <div>
+      <h4 style="margin:0 0 5px 0; color:white;">Selamat!</h4>
+      <p style="margin:0; font-size:0.95rem;">Rencana Tahunan K3 sudah mencapai <strong>90%</strong>! Terus pertahankan komitmen keselamatan!</p>
+    </div>
+    <button id="close-notif" style="background:rgba(255,255,255,0.3); border:none; color:white; font-size:1.5rem; cursor:pointer; width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center;">×</button>
+  </div>
+</div>
+
+<style>
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(100px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  #btn-rencana-tahunan:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,123,255,0.4);
+  }
+  
+  .btn-toggle-status:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+  
+  #close-modal:hover, #btn-close-modal:hover {
+    background: rgba(255,255,255,0.4);
+  }
+  
+  #btn-reset-progress:hover {
+    background: #c82333;
+  }
+  
+  #btn-print-rencana:hover {
+    background: #0056b3;
+  }
+</style>
+
+<script>
+  // FUNGSI UTAMA RENCANA TAHUNAN
+  (function() {
+    let totalKegiatan = 12;
+    let selesai = 11;  // 11 kegiatan selesai = 92%
+    let terjadwal = 1;
+    let belum = 0;
+    let notif90Shown = false;
+
+    // Buka Modal
+    document.getElementById('btn-rencana-tahunan').addEventListener('click', () => {
+      document.getElementById('modal-rencana').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+      
+      // Trigger notifikasi 90% saat modal dibuka
+      if (!notif90Shown && selesai >= 11) {
+        setTimeout(() => {
+          showNotif90();
+          notif90Shown = true;
+        }, 800);
+      }
+    });
+
+    // Tutup Modal
+    function closeModal() {
+      document.getElementById('modal-rencana').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    document.getElementById('close-modal').addEventListener('click', closeModal);
+    document.getElementById('btn-close-modal').addEventListener('click', closeModal);
+
+    // Klik di luar modal untuk tutup
+    document.getElementById('modal-rencana').addEventListener('click', (e) => {
+      if (e.target.id === 'modal-rencana') {
+        closeModal();
+      }
+    });
+
+    // Update Progress
+    function updateProgress() {
+      const progress = Math.round((selesai / totalKegiatan) * 100);
+      
+      document.getElementById('progress-bar').style.width = progress + '%';
+      document.getElementById('progress-text').textContent = progress + '%';
+      document.getElementById('count-selesai').textContent = selesai;
+      document.getElementById('count-terjadwal').textContent = terjadwal;
+      document.getElementById('count-belum').textContent = belum;
+
+      // Ubah warna progress bar sesuai persentase
+      const progressBar = document.getElementById('progress-bar');
+      if (progress >= 90) {
+        progressBar.style.background = 'linear-gradient(90deg, #28a745, #20c997)';
+        if (!notif90Shown) {
+          showNotif90();
+          notif90Shown = true;
+        }
+      } else if (progress >= 70) {
+        progressBar.style.background = 'linear-gradient(90deg, #ffc107, #ff9800)';
+      } else if (progress >= 50) {
+        progressBar.style.background = 'linear-gradient(90deg, #007BFF, #0056b3)';
+      }
+    }
+
+    // Toggle Status Kegiatan
+    document.querySelectorAll('.btn-toggle-status').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.kegiatan-item');
+        const currentStatus = item.dataset.status;
+        
+        // Cycle: belum -> terjadwal -> selesai -> belum
+        let newStatus;
+        if (currentStatus === 'belum') {
+          newStatus = 'terjadwal';
+          this.style.background = '#ffc107';
+          this.innerHTML = '⏳ Terjadwal';
+          belum--;
+          terjadwal++;
+        } else if (currentStatus === 'terjadwal') {
+          newStatus = 'selesai';
+          this.style.background = '#28a745';
+          this.innerHTML = '✓ Selesai';
+          terjadwal--;
+          selesai++;
+        } else {
+          newStatus = 'belum';
+          this.style.background = '#6c757d';
+          this.innerHTML = '⌛ Belum Mulai';
+          selesai--;
+          belum++;
+        }
+        
+        item.dataset.status = newStatus;
+        updateProgress();
+      });
+    });
+
+    // Reset Progress
+    document.getElementById('btn-reset-progress').addEventListener('click', () => {
+      if (confirm('Yakin ingin reset semua progress ke status awal?')) {
+        selesai = 11;  // Reset ke 92%
+        terjadwal = 1;
+        belum = 0;
+        notif90Shown = false;
+        
+        // Reset semua button
+        document.querySelectorAll('.kegiatan-item').forEach((item, index) => {
+          const btn = item.querySelector('.btn-toggle-status');
+          if (index < 11) {  // 11 kegiatan pertama selesai
+            item.dataset.status = 'selesai';
+            btn.style.background = '#28a745';
+            btn.innerHTML = '✓ Selesai';
+          } else if (index === 11) {  // Kegiatan terakhir terjadwal
+            item.dataset.status = 'terjadwal';
+            btn.style.background = '#ffc107';
+            btn.innerHTML = '⏳ Terjadwal';
+          } else {
+            item.dataset.status = 'belum';
+            btn.style.background = '#6c757d';
+            btn.innerHTML = '⌛ Belum Mulai';
+          }
+        });
+        
+        updateProgress();
+        alert('Progress berhasil di-reset ke 92%!');
+      }
+    });
+
+    // Print Rencana
+    document.getElementById('btn-print-rencana').addEventListener('click', () => {
+      window.print();
+    });
+
+    // Notifikasi 90%
+    function showNotif90() {
+      const notif = document.getElementById('notif-90');
+      notif.style.display = 'block';
+      
+      // Auto hide setelah 8 detik
+      setTimeout(() => {
+        notif.style.display = 'none';
+      }, 8000);
+    }
+
+    // Close notifikasi
+    document.getElementById('close-notif').addEventListener('click', () => {
+      document.getElementById('notif-90').style.display = 'none';
+    });
+
+    // Initialize
+    updateProgress();
+  })();
+</script>
+
+  <section id="absensi-fingerprint" style="background:#f7f7f7; padding:60px 20px; text-align:center;">
+  <h2>Absensi K3 dengan Sidik Jari</h2>
+  <p>Silakan sentuhkan jari Anda ke scanner (simulasi)</p>
 
 <section id="absensi-fingerprint" style="background:#f7f7f7; padding:60px 20px; text-align:center;">
   <h2>Absensi K3 dengan Sidik Jari</h2>
