@@ -691,32 +691,184 @@
     </div>
   </section>
 
-  <section id="visi-misi">
-    <h2>Visi & Misi</h2>
+  <!-- MULAI: BAGIAN KEBIJAKAN SMK3 (ganti hanya blok ini di welcome.blade.php) -->
+<section id="kebijakan-smk3" style="padding:40px 20px; background:#fff;">
+  <style>
+    /* Scoped styles khusus kebijakan (gunakan id untuk menghindari konflik) */
+    #kebijakan-smk3 .panel{max-width:1100px;margin:0 auto;border-radius:12px;padding:18px;box-shadow:0 8px 30px rgba(15,23,42,0.06);border:1px solid rgba(15,23,42,0.03);}
+    #kebijakan-smk3 .header-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+    #kebijakan-smk3 h2{color:#007BFF;margin:0 0 6px 0}
+    #kebijakan-smk3 .lead{color:#666;margin:0 0 8px 0}
+    #kebijakan-smk3 .policy-grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:14px}
+    @media (max-width:900px){ #kebijakan-smk3 .policy-grid{grid-template-columns:1fr} }
+    #kebijakan-smk3 .scope-list{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:8px}
+    #kebijakan-smk3 .scope-item{display:flex;gap:10px;align-items:flex-start}
+    #kebijakan-smk3 .dot{width:10px;height:10px;border-radius:50%;background:#007BFF;margin-top:6px}
+    #kebijakan-smk3 .accordion{border-radius:10px;overflow:hidden;border:1px solid rgba(15,23,42,0.04);margin-top:12px}
+    #kebijakan-smk3 .acc-item{border-bottom:1px solid rgba(15,23,42,0.04)}
+    #kebijakan-smk3 .acc-btn{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:transparent;border:none;width:100%;text-align:left;cursor:pointer}
+    #kebijakan-smk3 .acc-btn h4{margin:0;font-size:1rem}
+    #kebijakan-smk3 .acc-body{padding:0 14px 0 14px;max-height:0;overflow:hidden;transition:max-height .32s cubic-bezier(.2,.9,.2,.95),padding .22s}
+    #kebijakan-smk3 .chip{display:inline-block;background:#f1f5f9;color:#666;padding:6px 10px;border-radius:999px;font-size:0.85rem}
+    #kebijakan-smk3 .tools .law-list{background:linear-gradient(180deg,#fff,#f8fcff);padding:12px;border-radius:8px;border:1px solid rgba(0,86,179,0.06)}
+    #kebijakan-smk3 .btn{background:#007BFF;color:#fff;padding:8px 12px;border-radius:8px;border:none;cursor:pointer;font-weight:600}
+    #kebijakan-smk3 .btn.secondary{background:#eef6ff;color:#007BFF;border:1px solid rgba(0,123,255,0.12)}
+    #kebijakan-smk3 .small{font-size:0.92rem;color:#666}
+    #kebijakan-smk3 .progress{height:10px;background:#eef2ff;border-radius:999px;overflow:hidden}
+    #kebijakan-smk3 .progress > i{display:block;height:100%;background:linear-gradient(90deg,#007BFF,#0056b3);width:45%}
+  </style>
 
-    <div class="visi-misi-container">
-      <!-- Kolom Visi -->
-      <div class="visi-misi-column">
-        <h3>Visi</h3>
-        <p>
-          Menjadi perusahaan kuliner terdepan yang menjadikan keselamatan dan kesehatan kerja (K3)
-          sebagai budaya utama dalam setiap proses produksi dan pelayanan.
-        </p>
+  <div class="panel">
+    <div class="header-grid">
+      <div>
+        <h2>⭐ Kebijakan Perusahaan</h2>
+        <p class="lead">Manajemen <strong>Pentol BALL</strong> berkomitmen menerapkan Sistem Manajemen Keselamatan & Kesehatan Kerja (SMK3) untuk menjamin keselamatan, kualitas, dan kepatuhan di seluruh aktivitas produksi.</p>
       </div>
-
-      <!-- Kolom Misi -->
-      <div class="visi-misi-column">
-        <h3>Misi</h3>
-        <ul>
-          <li>Meningkatkan kesadaran dan kepatuhan seluruh karyawan terhadap standar K3.</li>
-          <li>Menyediakan lingkungan kerja yang aman, sehat, dan produktif.</li>
-          <li>Menjalankan sistem manajemen K3 yang berkelanjutan sesuai peraturan pemerintah.</li>
-          <li>Memastikan kualitas produk terjaga melalui penerapan prosedur keselamatan yang ketat.</li>
-          <li>Mendorong inovasi dan pelatihan berkelanjutan dalam aspek keamanan kerja.</li>
-        </ul>
+      <div style="text-align:right">
+        <div class="chip">Terakhir diperbarui: 10 Des 2025</div>
       </div>
     </div>
-  </section>
+
+    <div class="policy-grid">
+      <!-- KIRI: ruang lingkup + accordion -->
+      <div>
+        <h4 style="margin:0 0 8px 0">Ruang Lingkup</h4>
+        <ul class="scope-list">
+          <li class="scope-item"><span class="dot"></span><div>Area produksi (penggilingan, pencampuran, pembentukan, perebusan, pendinginan)</div></li>
+          <li class="scope-item"><span class="dot"></span><div>Penyimpanan bahan baku & hasil produksi (chiller/freezer)</div></li>
+          <li class="scope-item"><span class="dot"></span><div>Area sanitasi dan kebersihan lingkungan</div></li>
+          <li class="scope-item"><span class="dot"></span><div>Distribusi & pengiriman produk</div></li>
+          <li class="scope-item"><span class="dot"></span><div>Semua pekerja, tamu, supplier, dan kontraktor</div></li>
+        </ul>
+
+        <div class="accordion" id="keb_accordion">
+          <div class="acc-item">
+            <button class="acc-btn" data-target="keb_a1"><h4>1. Identifikasi Bahaya & Penilaian Risiko (HIRARC)</h4><span class="small">Lihat</span></button>
+            <div class="acc-body" id="keb_a1"><p class="small">Melakukan identifikasi bahaya, penilaian risiko, dan penentuan kontrol yang tepat untuk setiap tahap proses produksi. Hasil HIRARC direview setiap 6 bulan atau saat perubahan proses.</p></div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-btn" data-target="keb_a2"><h4>2. Penyediaan APD Wajib</h4><span class="small">Lihat</span></button>
+            <div class="acc-body" id="keb_a2"><p class="small">APD wajib termasuk sarung tangan, masker, apron, sepatu anti-slip, dan penutup kepala. Petunjuk penggunaan tersedia di area kerja.</p></div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-btn" data-target="keb_a3"><h4>3. Pelatihan & Kompetensi</h4><span class="small">Lihat</span></button>
+            <div class="acc-body" id="keb_a3"><p class="small">Pelatihan: penggunaan mesin, penanganan bahan, hygiene, dan P3K. Rekaman pelatihan disimpan di HR dan dievaluasi tiap tahun.</p></div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-btn" data-target="keb_a4"><h4>4. Kebersihan & Pemeriksaan Kesehatan</h4><span class="small">Lihat</span></button>
+            <div class="acc-body" id="keb_a4"><p class="small">Menjaga kebersihan sesuai standar keamanan pangan. Pemeriksaan kesehatan berkala untuk karyawan produksi.</p></div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-btn" data-target="keb_a5"><h4>5. Pemeliharaan & Perawatan Alat</h4><span class="small">Lihat</span></button>
+            <div class="acc-body" id="keb_a5"><p class="small">Jadwal pemeliharaan preventif dan checklist harian untuk setiap mesin. Catatan perawatan tersimpan di log mesin.</p></div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-btn" data-target="keb_a6"><h4>6. Pelaporan dan Tindak Lanjut Insiden</h4><span class="small">Lihat</span></button>
+            <div class="acc-body" id="keb_a6"><p class="small">Semua insiden dilaporkan melalui formulir digital, diinvestigasi, dan diikuti tindakan korektif untuk mencegah ulang.</p></div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-btn" data-target="keb_a7"><h4>7. Sanksi & Kepatuhan</h4><span class="small">Lihat</span></button>
+            <div class="acc-body" id="keb_a7"><p class="small">Pelanggaran prosedur akan dikenakan sanksi administratif hingga tindakan disipliner sesuai kebijakan.</p></div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+          <button class="btn" id="keb_copySummary">Salin Ringkasan</button>
+          <button class="btn secondary" id="keb_print">Cetak / Simpan PDF</button>
+        </div>
+      </div>
+
+      <!-- KANAN: tools singkat -->
+      <aside class="tools" style="padding:12px;">
+        <div style="margin-bottom:10px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <strong>Statistik Singkat</strong><span class="small">Tahun 2025</span>
+          </div>
+          <div style="margin-top:8px" class="small">Insiden tercatat: <strong>10</strong></div>
+          <div style="margin-top:6px" class="small">Laporan Kejadian: <strong>18</strong></div>
+          <div style="margin-top:8px" class="progress" aria-hidden="true"><i></i></div>
+        </div>
+
+        <div style="margin-bottom:10px">
+          <label class="small">Landasan Hukum</label>
+          <ul class="law-list" style="margin-top:6px;padding-left:12px">
+            <li><strong>UU No. 1 Tahun 1970</strong> — Keselamatan Kerja</li>
+            <li><strong>UU No. 13 Tahun 2003</strong> — Ketenagakerjaan</li>
+            <li><strong>PP No. 50 Tahun 2012</strong> — SMK3</li>
+          </ul>
+        </div>
+
+        <div>
+          <label class="small">Aksi Cepat</label>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px">
+            <button class="btn secondary" id="keb_reportIncident">Laporkan Insiden</button>
+            <a class="btn" href="{{ url('/penerapan-k3') }}">Detail Penerapan</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    /* Script khusus kebijakan (unik id prefiks keb_) */
+    (function(){
+      // Accordion
+      document.querySelectorAll('#kebijakan-smk3 .acc-btn').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const target = btn.dataset.target;
+          const body = document.getElementById(target);
+          const isOpen = body.style.maxHeight && body.style.maxHeight !== '0px';
+          // close all
+          document.querySelectorAll('#kebijakan-smk3 .acc-body').forEach(b=>{ b.style.maxHeight = null; b.style.paddingBottom = '0'; });
+          if(!isOpen){ body.style.paddingBottom = '12px'; body.style.maxHeight = body.scrollHeight + 'px'; }
+        });
+      });
+
+      // Search filter
+      const search = document.getElementById('keb_search');
+      if(search){
+        search.addEventListener('input', e=>{
+          const q = e.target.value.toLowerCase().trim();
+          document.querySelectorAll('#kebijakan-smk3 #keb_accordion .acc-item').forEach(item=>{
+            const txt = item.innerText.toLowerCase();
+            item.style.display = txt.includes(q) ? '' : 'none';
+          });
+        });
+      }
+
+      // Copy summary
+      document.getElementById('keb_copySummary')?.addEventListener('click', async ()=>{
+        const summary = `Pentol BALL - Kebijakan SMK3\n\nRuang Lingkup:\n- Area produksi\n- Penyimpanan bahan baku\n- Sanitasi\n- Distribusi\n- Semua pekerja/kontraktor\n\nKomitmen utama: HIRARC, APD, Pelatihan, Kebersihan, Pemeliharaan, Pelaporan, Sanksi.`;
+        try{ await navigator.clipboard.writeText(summary); alert('Ringkasan berhasil disalin ke clipboard!'); }
+        catch(e){ alert('Tidak dapat mengakses clipboard. Silakan copy manual:\\n\\n'+summary); }
+      });
+
+      // Print
+      document.getElementById('keb_print')?.addEventListener('click', ()=>{ window.print(); });
+
+      // Report incident (simulasi)
+      document.getElementById('keb_reportIncident')?.addEventListener('click', ()=>{
+        const title = prompt('Judul Insiden (singkat):');
+        if(!title) return alert('Pembatalan.');
+        const desc = prompt('Deskripsi singkat insiden:');
+        if(!desc) return alert('Pembatalan.');
+        alert('Terima kasih — laporan akan dikirim ke tim K3 (simulasi).');
+        // Jika ingin dihubungkan ke API: lakukan fetch POST ke endpoint Anda di sini.
+      });
+
+      // Auto-expand first item for readability
+      window.addEventListener('load', ()=>{ const f = document.getElementById('keb_a1'); if(f){ f.style.maxHeight = f.scrollHeight + 'px'; f.style.paddingBottom = '12px'; } });
+    })();
+  </script>
+</section>
+<!-- SELESAI: BAGIAN KEBIJAKAN SMK3 -->
+
   <section id="produk" style="background:#fcfcfc; padding:60px 20px;">
   <h2>Jenis Produk Pentol BALL</h2>
   <div class="produk-container-scroll">
