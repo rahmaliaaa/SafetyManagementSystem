@@ -724,37 +724,37 @@
       <img src="{{ asset('images/pentol-original.jpg') }}" alt="Pentol Original" style="width:200px; height:100px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
       <h3>Pentol Original</h3>
       <p>Pentol tradisional dengan rasa gurih khas, cocok untuk camilan atau lauk tambahan.</p>
-      <a href="{{ url('/produk#pentol-original') }}" class="learn-more-btn">Lihat Detail →</a>
+      <a href="{{ url('/produk/pentol-original') }}" class="learn-more-btn">Lihat Detail →</a>
     </div>
     <div class="produk-card">
       <img src="{{ asset('images/pentol-keju.jpg') }}" alt="Pentol Original" style="width:200px; height:100px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
       <h3>Pentol Keju</h3>
       <p>Pentol berisi keju leleh, favorit anak-anak dan pecinta keju.</p>
-      <a href="{{ url('/produk#pentol-keju') }}" class="learn-more-btn">Lihat Detail →</a>
+      <a href="{{ url('/produk/pentol-original') }}" class="learn-more-btn">Lihat Detail →</a>
     </div>
     <div class="produk-card">
       <img src="{{ asset('images/pentol-pedas.jpg') }}" alt="Pentol Keju" style="width:200px; height:100px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
       <h3>Pentol Pedas</h3>
       <p>Pentol dengan bumbu pedas menggigit, cocok untuk yang suka sensasi pedas.</p>
-      <a href="{{ url('/produk#pentol-pedas') }}" class="learn-more-btn">Lihat Detail →</a>
+      <a href="{{ url('/produk/pentol-original') }}" class="learn-more-btn">Lihat Detail →</a>
     </div>
     <div class="produk-card">
       <img src="{{ asset('images/pentol-telur.jpg') }}" alt="Pentol Telur" style="width:200px; height:100px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
       <h3>Pentol Telur</h3>
       <p>Pentol isi Telur pilihan yang premium, memiliki aroma khas dan tekstur lembut.</p>
-      <a href="{{ url('/produk#pentol-telur') }}" class="learn-more-btn">Lihat Detail →</a>
+      <a href="{{ url('/produk/pentol-original') }}" class="learn-more-btn">Lihat Detail →</a>
     </div>
     <div class="produk-card">
       <img src="{{ asset('images/pentol-daging.jpg') }}" alt="Pentol Daging" style="width:200px; height:100px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
       <h3>Pentol Daging</h3>
       <p>Pentol dengan isian Daging Cacian, memiliki aroma khas dan tekstur lembut.</p>
-      <a href="{{ url('/produk#pentol-daging') }}" class="learn-more-btn">Lihat Detail →</a>
+      <a href="{{ url('/produk/pentol-original') }}" class="learn-more-btn">Lihat Detail →</a>
     </div>
     <div class="produk-card">
       <img src="{{ asset('images/pentol-beranak.jpg') }}" alt="Pentol Beranak" style="width:200px; height:100px; object-fit:cover; border-radius:10px; margin-bottom:15px;">
       <h3>Pentol Beranak</h3>
       <p>Pentol Speisal Beranak, memiliki aroma khas dan tekstur lembut.</p>
-      <a href="{{ url('/produk#pentol-cumi') }}" class="learn-more-btn">Lihat Detail →</a>
+      <a href="{{ url('/produk/pentol-original') }}" class="learn-more-btn">Lihat Detail →</a>
     </div>
     
     <!-- Tambahkan card lain jika perlu -->
@@ -931,10 +931,6 @@ fingerprintScan.addEventListener('click', () => {
     counter++;
   });
 </script>
-
-
-
-
 
   <!-- Footer -->
   <footer>

@@ -42,3 +42,10 @@ Route::get('/struktur-organisasi', function () {
 Route::get('/k3-document-management', function () {
     return view('k3_document_management'); 
 });
+Route::get('/produk/pentol-original', function () {
+    return view('detailProduk', [
+        'title' => 'Pentol Original',
+        'image' => 'pentol-original.jpg',
+        'description' => 'Pentol Original dibuat dari bahan berkualitas...'
+    ]);
+});

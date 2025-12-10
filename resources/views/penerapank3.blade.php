@@ -282,7 +282,39 @@
             font-size: 0.95rem;
             color: #444;
         }
+        /* Catatan K3 */
+        .catatan-k3-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
 
+        .catatan-k3-table th {
+            background: var(--warning);
+            color: #222;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .catatan-k3-table td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .status-belum {
+            color: var(--danger);
+            font-weight: 700;
+        }
+
+        .status-proses {
+            color: var(--warning);
+            font-weight: 700;
+        }
+
+        .status-selesai {
+            color: var(--success);
+            font-weight: 700;
+        }
         /* MODIFIKASI CSS UNTUK SIMULASI KEBAKARAN (BOX LEBIH BAGUS) */
         
         /* Box Pembungkus Langkah yang Diperbarui */
@@ -598,7 +630,7 @@
     <!-- Dokumentasi 1 -->
     <div class="col-md-4 col-sm-6">
         <div class="card shadow-sm h-100">
-            <img src="https://images.pexels.com/photos/4425765/pexels-photo-4425765.jpeg?auto=compress&cs=tinysrgb&h=400" 
+            <img src="{{ asset('images/simulasi-kebakaran.jpg') }}"
                  class="card-img-top" 
                  alt="Simulasi Kebakaran"
                  style="height: 200px; object-fit: cover;">
@@ -615,7 +647,7 @@
     <!-- Dokumentasi 2 -->
     <div class="col-md-4 col-sm-6">
         <div class="card shadow-sm h-100">
-            <img src="https://images.pexels.com/photos/3184295/pexels-photo-3184295.jpeg?auto=compress&cs=tinysrgb&h=400" 
+            <img src="{{ asset('images/safetytalk.jpeg') }}"
                  class="card-img-top" 
                  alt="Safety Talk"
                  style="height: 200px; object-fit: cover;">
@@ -632,7 +664,7 @@
     <!-- Dokumentasi 3 -->
     <div class="col-md-4 col-sm-6">
         <div class="card shadow-sm h-100">
-            <img src="https://blog.axcethr.com/hubfs/fire-drill-at-work-_1200-%C3%97-628-px__1%20%281%29.webp" 
+            <img src="{{ asset('images/simulasievakuasi.jpeg') }}"
                  class="card-img-top" 
                  alt="Simulasi Evakuasi Karyawan"
                  style="height: 200px; object-fit: cover;">
@@ -648,7 +680,7 @@
 </div>
 
 
-       <div class="card" id="safetalk">
+    <div class="card" id="safetalk">
     <h4 class="section-title">Pengumuman Safety Talk Mingguan 📣</h4>
     <p class="text-muted">Ayo tingkatkan kesadaran K3! Bersiaplah untuk Safety Talk mingguan yang akan datang.</p>
 
@@ -688,6 +720,45 @@
             *Kehadiran wajib bagi seluruh Staf Produksi, Gudang, dan Quality Control.
         </p>
     </div>
+</div>
+<div class="card" id="catatank3">
+    <h4 class="section-title">Catatan K3 (Temuan & Perbaikan)</h4>
+    <p>
+        Catatan K3 berisi dokumentasi temuan risiko atau kerusakan pada area produksi, 
+        beserta tindakan perbaikan yang telah dilakukan. Catatan ini berbeda dengan 
+        <strong>simulasi kebakaran</strong> karena sifatnya <em>real</em> / kejadian nyata di lapangan.
+    </p>
+
+    <table class="catatan-k3-table shadow-sm">
+        <thead>
+            <tr>
+                <th style="width:40%">Temuan</th>
+                <th style="width:25%">Tanggal</th>
+                <th style="width:35%">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mesin Pengaduk Bergetar Berlebihan</td>
+                <td>10 Des 2025</td>
+                <td class="status-selesai">Sudah Diperbaiki</td>
+            </tr>
+            <tr>
+                <td>Kabel Panel Utama Mengelupas</td>
+                <td>9 Des 2025</td>
+                <td class="status-proses">Dalam Proses Perbaikan</td>
+            </tr>
+            <tr>
+                <td>Lantai Area Goreng Licin Saat Produksi</td>
+                <td>8 Des 2025</td>
+                <td class="status-belum">Belum Ditangani</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="text-muted mt-2 fst-italic">
+        Catatan ini diperbarui setiap ada temuan baru dari pengawas K3 di lapangan.
+    </p>
 </div>
 
 <!-- Modal Notulensi -->
@@ -753,9 +824,6 @@ document.getElementById("downloadPDF").addEventListener("click", () => {
 
     <!-- Tambahkan tombol download di atas atau bawah notulensi -->
 <button id="downloadPDF" class="btn btn-success mb-3">
-
-
-
     <footer>
         <div style="max-width: 900px; margin: 0 auto; text-align: center;">
             <p><strong>Pentol BALL</strong> — Keselamatan Dimulai dari Kesadaran.</p>
@@ -789,7 +857,7 @@ document.getElementById("downloadPDF").addEventListener("click", () => {
         const scheduleTheme = "Kebakaran & Evakuasi di Area Produksi";
         const scheduleDateDisplay = "Jumat, 19 Desember 2025";
         const scheduleTimeDisplay = "08:00 - 08:30 WIB";
-generate
+
         // Update elemen HTML dengan detail jadwal
         document.getElementById('talkTheme').textContent = scheduleTheme;
         document.getElementById('talkDateDisplay').textContent = scheduleDateDisplay;
